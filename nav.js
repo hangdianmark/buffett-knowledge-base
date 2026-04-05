@@ -4,64 +4,69 @@
 
 /**
  * 展开/收起侧边栏导航分组
- * @param {string} id - 要切换的分组元素ID
  */
 function toggle(id) {
-    const el = document.getElementById(id);
+    var el = document.getElementById(id);
     if (!el) return;
-
-    const isHidden = el.classList.contains('hidden');
-    if (isHidden) {
-        el.classList.remove('hidden');
-        el.style.maxHeight = el.scrollHeight + 'px';
-    } else {
-        el.classList.add('hidden');
-        el.style.maxHeight = '0';
+    
+    // 切换 .open 类
+    el.classList.toggle('open');
+    
+    // 同时更新父标题的 open 状态
+    var title = el.previousElementSibling;
+    if (title && title.classList.contains('nav-group-title')) {
+        title.classList.toggle('open');
     }
 }
 
 /**
- * 初始化侧边栏：为所有隐藏的分组设置初始状态
+ * 初始化侧边栏
  */
 document.addEventListener('DOMContentLoaded', function() {
-    // 为所有 nav-group-items 添加 hidden 类并设置初始 maxHeight
+    // 初始化所有分组为收起状态
     document.querySelectorAll('.nav-group-items').forEach(function(el) {
-        if (!el.classList.contains('nav-group-items-0')) {
-            el.classList.add('hidden');
-            el.style.maxHeight = '0';
-            el.style.overflow = 'hidden';
-            el.style.transition = 'max-height 0.3s ease-out';
+        el.classList.remove('open');
+    });
+    
+    // 初始化所有分组标题
+    document.querySelectorAll('.nav-group-title').forEach(function(el) {
+        el.classList.remove('open');
+    });
+    
+    // 高亮当前页面链接
+    var currentPath = window.location.pathname;
+    document.querySelectorAll('.nav-link').forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (href && currentPath.endsWith(href)) {
+            link.classList.add('active');
         }
     });
-
-    // 汉堡菜单移动端开关
-    const hamburger = document.querySelector('.hamburger');
-    if (hamburger) {
-        hamburger.addEventListener('click', function() {
-            const sidebar = document.getElementById('sidebar');
-            if (sidebar) sidebar.classList.toggle('open');
-        });
-    }
-
-    // 点击主内容区域关闭侧边栏（移动端）
-    document.addEventListener('click', function(e) {
-        const sidebar = document.getElementById('sidebar');
-        if (sidebar && sidebar.classList.contains('open')) {
-            if (!sidebar.contains(e.target) && !document.querySelector('.hamburger')?.contains(e.target)) {
-                sidebar.classList.remove('open');
+    
+    // 自动展开当前分组
+    var activeLink = document.querySelector('.nav-link.active');
+    if (activeLink) {
+        var group = activeLink.closest('.nav-group-items');
+        if (group) {
+            group.classList.add('open');
+            var title = group.previousElementSibling;
+            if (title && title.classList.contains('nav-group-title')) {
+                title.classList.add('open');
             }
         }
-    });
-
-    // 键盘可访问性：支持 Enter/Space 键触发 toggle
+    }
+    
+    // 键盘可访问性
     document.querySelectorAll('.nav-group-title').forEach(function(el) {
         el.setAttribute('tabindex', '0');
         el.setAttribute('role', 'button');
         el.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                const id = this.getAttribute('onclick')?.match(/toggle\('([^']+)'\)/)?.[1];
-                if (id) toggle(id);
+                var id = this.getAttribute('onclick');
+                if (id) {
+                    var match = id.match(/toggle\('([^']+)'\)/);
+                    if (match) toggle(match[1]);
+                }
             }
         });
     });

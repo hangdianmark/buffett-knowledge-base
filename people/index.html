@@ -7,47 +7,108 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<button class="hamburger" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
-<aside class="sidebar" id="sidebar">
-<div class="sidebar-header"><a href="../index.html" class="logo">📚 巴菲特知识库</a></div>
-<div class="sidebar-nav">
-<a href="../index.html" class="nav-link nav-home">🏠 首页</a>
+<button class="hamburger" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+
+<header class="top-header">
+<div class="top-header-inner">
+<h1>📚 巴菲特致股东信知识库</h1>
+<nav class="top-nav">
+<a href="../index.html">🏠 首页</a>
+<a href="../browse.html#people">👤 人物索引</a>
+<a href="../about.html">ℹ️ 关于</a>
+</nav>
+</div>
+</header>
+
+<div class="layout">
+<aside class="sidebar">
+<div class="sidebar-section">
 <div class="nav-group">
-<div class="nav-group-title" onclick="toggle('索引')"><span class="caret"></span>索引<span class="badge">2</span></div>
-<div class="nav-group-items" id="索引">
-<a href="../partnership.html" class="nav-link">合伙人信专门页面</a>
-<a href="../browse.html" class="nav-link">内容浏览</a>
-</div></div>
+<div class="nav-group-title" onclick="toggleNav(this)"><span class="caret"></span>合伙人信<span class="badge">17</span></div>
+<div class="nav-group-items">
+<a href="../partnership/1956-有限合伙协议.html" class="nav-link">1956 有限合伙协议</a>
+<a href="../partnership/1957-巴菲特致合伙人信.html" class="nav-link">1957 巴菲特致合伙人信</a>
+</div>
+</div>
 <div class="nav-group">
-<div class="nav-group-title" onclick="toggle('06_人物')"><span class="caret"></span>关键人物<span class="badge open">7</span></div>
-<div class="nav-group-items open" id="06_人物">
-<a href="芒格.html" class="nav-link">芒格</a>
-<a href="格雷厄姆.html" class="nav-link">格雷厄姆</a>
+<div class="nav-group-title" onclick="toggleNav(this)"><span class="caret"></span>伯克希尔股东信<span class="badge">60</span></div>
+<div class="nav-group-items">
+<a href="../berkshire/1965-巴菲特致股东信.html" class="nav-link">1965 巴菲特致股东信</a>
+<a href="../berkshire/2024-巴菲特致股东信.html" class="nav-link">2024 巴菲特致股东信</a>
+</div>
+</div>
+<div class="nav-group">
+<div class="nav-group-title" onclick="toggleNav(this)"><span class="caret"></span>核心概念<span class="badge">35</span></div>
+<div class="nav-group-items">
+<a href="../concepts/内在价值.html" class="nav-link">内在价值</a>
+<a href="../concepts/安全边际.html" class="nav-link">安全边际</a>
+</div>
+</div>
+<div class="nav-group">
+<div class="nav-group-title" onclick="toggleNav(this)"><span class="caret"></span>投资公司<span class="badge">62</span></div>
+<div class="nav-group-items">
+<a href="../companies/伯克希尔哈撒韦.html" class="nav-link">伯克希尔哈撒韦</a>
+<a href="../companies/可口可乐.html" class="nav-link">可口可乐</a>
+</div>
+</div>
+<div class="nav-group">
+<div class="nav-group-title open" onclick="toggleNav(this)"><span class="caret"></span>关键人物<span class="badge">7</span></div>
+<div class="nav-group-items open">
+<a href="芒格.html" class="nav-link">查理·芒格</a>
+<a href="格雷厄姆.html" class="nav-link">本杰明·格雷厄姆</a>
 <a href="B夫人.html" class="nav-link">B夫人</a>
 <a href="阿吉特·贾恩.html" class="nav-link">阿吉特·贾恩</a>
 <a href="格雷格·阿贝尔.html" class="nav-link">格雷格·阿贝尔</a>
 <a href="托德·库姆斯.html" class="nav-link">托德·库姆斯</a>
 <a href="泰德·韦施勒.html" class="nav-link">泰德·韦施勒</a>
-</div></div>
 </div>
-<div class="nav-footer"><span>📚 巴菲特知识库</span></div>
+</div>
+</div>
 </aside>
+
 <main class="main">
 <div class="page-header">
 <h1>👤 关键人物</h1>
-<p>对巴菲特投资思想产生深远影响的关键人物</p>
+<p class="subtitle">巴菲特的合作伙伴、导师和追随者</p>
 </div>
 
-<div class="browse-grid">
-<a href="芒格.html" class="browse-card"><div class="browse-icon">🤝</div><h3>芒格</h3><p>伯克希尔的副主席，巴菲特的终身合作伙伴，"多元思维模型"的倡导者</p></a>
-<a href="格雷厄姆.html" class="browse-card"><div class="browse-icon">📚</div><h3>格雷厄姆</h3><p>巴菲特的导师，《证券分析》和《聪明的投资者》的作者，价值投资之父</p></a>
-<a href="B夫人.html" class="browse-card"><div class="browse-icon">👩‍💼</div><h3>B夫人</h3><p>内布拉斯加家具店的创始人，奥马哈的商业传奇，巴菲特最敬佩的企业家</p></a>
-<a href="阿吉特·贾恩.html" class="browse-card"><div class="browse-icon">🛡️</div><h3>阿吉特·贾恩</h3><p>伯克希尔再保险业务的掌门人，保险业的天才管理者</p></a>
-<a href="格雷格·阿贝尔.html" class="browse-card"><div class="browse-icon">⚡</div><h3>格雷格·阿贝尔</h3><p>伯克希尔能源业务负责人，巴菲特的潜在接班人之一</p></a>
-<a href="托德·库姆斯.html" class="browse-card"><div class="browse-icon">📈</div><h3>托德·库姆斯</h3><p>伯克希尔投资经理，负责股票投资组合</p></a>
-<a href="泰德·韦施勒.html" class="browse-card"><div class="browse-icon">💼</div><h3>泰德·韦施勒</h3><p>前伯克希尔投资经理，为伯克希尔发现优质投资机会</p></a>
+<div class="stats-grid">
+<div class="stat-card"><span class="stat-value">7</span><span class="stat-label">关键人物</span></div>
+</div>
+
+<div class="feature-grid">
+<a href="../browse.html#people" class="feature-card">
+<div class="feature-icon">📋</div>
+<h3>人物总览</h3>
+<p>浏览所有关键人物</p>
+</a>
+<a href="../index.html" class="feature-card">
+<div class="feature-icon">🏠</div>
+<h3>返回首页</h3>
+<p>回到知识库首页</p>
+</a>
+</div>
+
+<div class="content-section">
+<h2>📋 全部人物列表</h2>
+<div class="tag-list">
+<a href="芒格.html" class="tag">查理·芒格</a>
+<a href="格雷厄姆.html" class="tag">本杰明·格雷厄姆</a>
+<a href="B夫人.html" class="tag">B夫人</a>
+<a href="阿吉特·贾恩.html" class="tag">阿吉特·贾恩</a>
+<a href="格雷格·阿贝尔.html" class="tag">格雷格·阿贝尔</a>
+<a href="托德·库姆斯.html" class="tag">托德·库姆斯</a>
+<a href="泰德·韦施勒.html" class="tag">泰德·韦施勒</a>
+</div>
 </div>
 </main>
-<script src="../nav.js"></script>
+</div>
+
+<script>
+function toggleNav(el) {
+  el.classList.toggle('open');
+  el.nextElementSibling.classList.toggle('open');
+}
+</script>
 </body>
 </html>

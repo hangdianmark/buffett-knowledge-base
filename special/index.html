@@ -7,41 +7,102 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<button class="hamburger" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
-<aside class="sidebar" id="sidebar">
-<div class="sidebar-header"><a href="../index.html" class="logo">📚 巴菲特知识库</a></div>
-<div class="sidebar-nav">
-<a href="../index.html" class="nav-link nav-home">🏠 首页</a>
+<button class="hamburger" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+
+<header class="top-header">
+<div class="top-header-inner">
+<h1>📚 巴菲特致股东信知识库</h1>
+<nav class="top-nav">
+<a href="../index.html">🏠 首页</a>
+<a href="../berkshire/index.html">📬 致股东信</a>
+<a href="../about.html">ℹ️ 关于</a>
+</nav>
+</div>
+</header>
+
+<div class="layout">
+<aside class="sidebar">
+<div class="sidebar-section">
 <div class="nav-group">
-<div class="nav-group-title" onclick="toggle('索引')"><span class="caret"></span>索引<span class="badge">2</span></div>
-<div class="nav-group-items" id="索引">
-<a href="../partnership.html" class="nav-link">合伙人信专门页面</a>
-<a href="../browse.html" class="nav-link">内容浏览</a>
-</div></div>
+<div class="nav-group-title" onclick="toggleNav(this)"><span class="caret"></span>合伙人信<span class="badge">17</span></div>
+<div class="nav-group-items">
+<a href="../partnership/1956-有限合伙协议.html" class="nav-link">1956 有限合伙协议</a>
+<a href="../partnership/1957-巴菲特致合伙人信.html" class="nav-link">1957 巴菲特致合伙人信</a>
+</div>
+</div>
 <div class="nav-group">
-<div class="nav-group-title" onclick="toggle('03_特别信件')"><span class="caret"></span>特别信件<span class="badge open">4</span></div>
-<div class="nav-group-items open" id="03_特别信件">
+<div class="nav-group-title" onclick="toggleNav(this)"><span class="caret"></span>伯克希尔股东信<span class="badge">60</span></div>
+<div class="nav-group-items">
+<a href="../berkshire/1965-巴菲特致股东信.html" class="nav-link">1965 巴菲特致股东信</a>
+<a href="../berkshire/2024-巴菲特致股东信.html" class="nav-link">2024 巴菲特致股东信</a>
+</div>
+</div>
+<div class="nav-group">
+<div class="nav-group-title open" onclick="toggleNav(this)"><span class="caret"></span>特别信件<span class="badge">4</span></div>
+<div class="nav-group-items open">
 <a href="2014-伯克希尔的过去现在与未来.html" class="nav-link">2014 伯克希尔的过去现在与未来</a>
 <a href="2014-副董事长的思考.html" class="nav-link">2014 副董事长的思考</a>
 <a href="2025-感恩节致辞.html" class="nav-link">2025 感恩节致辞</a>
 <a href="2025-感恩节致辞_2.html" class="nav-link">2025 感恩节致辞_2</a>
-</div></div>
 </div>
-<div class="nav-footer"><span>📚 巴菲特知识库</span></div>
+</div>
+<div class="nav-group">
+<div class="nav-group-title" onclick="toggleNav(this)"><span class="caret"></span>核心概念<span class="badge">35</span></div>
+<div class="nav-group-items">
+<a href="../concepts/内在价值.html" class="nav-link">内在价值</a>
+<a href="../concepts/安全边际.html" class="nav-link">安全边际</a>
+</div>
+</div>
+<div class="nav-group">
+<div class="nav-group-title" onclick="toggleNav(this)"><span class="caret"></span>关键人物<span class="badge">7</span></div>
+<div class="nav-group-items">
+<a href="../people/芒格.html" class="nav-link">芒格</a>
+<a href="../people/格雷厄姆.html" class="nav-link">格雷厄姆</a>
+</div>
+</div>
+</div>
 </aside>
+
 <main class="main">
 <div class="page-header">
-<h1>⭐ 特别信件</h1>
-<p>巴菲特的特别信件，包括重要回顾和节日致辞</p>
+<h1>📜 特别信件</h1>
+<p class="subtitle">巴菲特的特别致信和致辞</p>
 </div>
 
-<div class="browse-grid">
-<a href="2014-伯克希尔的过去现在与未来.html" class="browse-card"><div class="browse-icon">📜</div><h3>2014：伯克希尔的过去、现在与未来</h3><p>巴菲特执笔的重要历史回顾文章，系统阐述伯克希尔50年的发展历程与未来愿景</p></a>
-<a href="2014-副董事长的思考.html" class="browse-card"><div class="browse-icon">💭</div><h3>2014：副董事长的思考</h3><p>芒格对伯克希尔文化与投资哲学的深入思考</p></a>
-<a href="2025-感恩节致辞.html" class="browse-card"><div class="browse-icon">🦃</div><h3>2025：感恩节致辞</h3><p>巴菲特的最新感恩节祝福与思考</p></a>
-<a href="2025-感恩节致辞_2.html" class="browse-card"><div class="browse-icon">🦃</div><h3>2025：感恩节致辞（二）</h3><p>巴菲特的感恩节特别思考</p></a>
+<div class="stats-grid">
+<div class="stat-card"><span class="stat-value">4</span><span class="stat-label">特别信件</span></div>
+</div>
+
+<div class="feature-grid">
+<a href="../berkshire/index.html" class="feature-card">
+<div class="feature-icon">📬</div>
+<h3>致股东信</h3>
+<p>浏览年度致股东信</p>
+</a>
+<a href="../index.html" class="feature-card">
+<div class="feature-icon">🏠</div>
+<h3>返回首页</h3>
+<p>回到知识库首页</p>
+</a>
+</div>
+
+<div class="content-section">
+<h2>📋 全部特别信件</h2>
+<div class="tag-list">
+<a href="2014-伯克希尔的过去现在与未来.html" class="tag">2014 伯克希尔的过去现在与未来</a>
+<a href="2014-副董事长的思考.html" class="tag">2014 副董事长的思考</a>
+<a href="2025-感恩节致辞.html" class="tag">2025 感恩节致辞</a>
+<a href="2025-感恩节致辞_2.html" class="tag">2025 感恩节致辞_2</a>
+</div>
 </div>
 </main>
-<script src="../nav.js"></script>
+</div>
+
+<script>
+function toggleNav(el) {
+  el.classList.toggle('open');
+  el.nextElementSibling.classList.toggle('open');
+}
+</script>
 </body>
 </html>

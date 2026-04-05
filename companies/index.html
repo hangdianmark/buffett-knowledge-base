@@ -3,106 +3,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>投资案例分析 - 巴菲特知识库</title>
+<title>投资公司 - 巴菲特知识库</title>
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<button class="hamburger" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
-<aside class="sidebar" id="sidebar">
-<div class="sidebar-header"><a href="../index.html" class="logo">📚 巴菲特知识库</a></div>
-<div class="sidebar-nav">
-<a href="../index.html" class="nav-link nav-home">🏠 首页</a>
+<button class="hamburger" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+
+<header class="top-header">
+<div class="top-header-inner">
+<h1>📚 巴菲特致股东信知识库</h1>
+<nav class="top-nav">
+<a href="../index.html">🏠 首页</a>
+<a href="../browse.html#companies">🏢 公司索引</a>
+<a href="../about.html">ℹ️ 关于</a>
+</nav>
+</div>
+</header>
+
+<div class="layout">
+<aside class="sidebar">
+<div class="sidebar-section">
 <div class="nav-group">
-<div class="nav-group-title" onclick="toggle('索引')"><span class="caret"></span>索引<span class="badge">2</span></div>
-<div class="nav-group-items" id="索引">
-<a href="../partnership.html" class="nav-link">合伙人信专门页面</a>
-<a href="../browse.html" class="nav-link">内容浏览</a>
-</div></div>
+<div class="nav-group-title" onclick="toggleNav(this)"><span class="caret"></span>合伙人信<span class="badge">17</span></div>
+<div class="nav-group-items">
+<a href="../partnership/1956-有限合伙协议.html" class="nav-link">1956 有限合伙协议</a>
+<a href="../partnership/1957-巴菲特致合伙人信.html" class="nav-link">1957 巴菲特致合伙人信</a>
+</div>
+</div>
 <div class="nav-group">
-<div class="nav-group-title" onclick="toggle('05_公司')"><span class="caret"></span>投资案例<span class="badge open">61</span></div>
-<div class="nav-group-items open" id="05_公司">
+<div class="nav-group-title" onclick="toggleNav(this)"><span class="caret"></span>伯克希尔股东信<span class="badge">60</span></div>
+<div class="nav-group-items">
+<a href="../berkshire/1965-巴菲特致股东信.html" class="nav-link">1965 巴菲特致股东信</a>
+<a href="../berkshire/2024-巴菲特致股东信.html" class="nav-link">2024 巴菲特致股东信</a>
+</div>
+</div>
+<div class="nav-group">
+<div class="nav-group-title" onclick="toggleNav(this)"><span class="caret"></span>核心概念<span class="badge">35</span></div>
+<div class="nav-group-items">
+<a href="../concepts/内在价值.html" class="nav-link">内在价值</a>
+<a href="../concepts/安全边际.html" class="nav-link">安全边际</a>
+<a href="../concepts/护城河.html" class="nav-link">护城河</a>
+</div>
+</div>
+<div class="nav-group">
+<div class="nav-group-title open" onclick="toggleNav(this)"><span class="caret"></span>投资公司<span class="badge">62</span></div>
+<div class="nav-group-items open">
 <a href="伯克希尔哈撒韦.html" class="nav-link">伯克希尔哈撒韦</a>
 <a href="盖可保险.html" class="nav-link">盖可保险</a>
 <a href="可口可乐.html" class="nav-link">可口可乐</a>
 <a href="美国运通.html" class="nav-link">美国运通</a>
 <a href="苹果.html" class="nav-link">苹果</a>
 <a href="富国银行.html" class="nav-link">富国银行</a>
+<a href="美国银行.html" class="nav-link">美国银行</a>
 <a href="比亚迪.html" class="nav-link">比亚迪</a>
+<a href="BNSF铁路.html" class="nav-link">BNSF铁路</a>
 <a href="穆迪.html" class="nav-link">穆迪</a>
 <a href="内布拉斯加家具店.html" class="nav-link">内布拉斯加家具店</a>
 <a href="华盛顿邮报.html" class="nav-link">华盛顿邮报</a>
-</div></div>
+<a href="波仙珠宝.html" class="nav-link">波仙珠宝</a>
+<a href="国民保险公司.html" class="nav-link">国民保险公司</a>
+<a href="冰雪皇后.html" class="nav-link">冰雪皇后</a>
+<a href="布法罗新闻报.html" class="nav-link">布法罗新闻报</a>
+<a href="通用再保险.html" class="nav-link">通用再保险</a>
+<a href="韦斯科.html" class="nav-link">韦斯科</a>
+<a href="大都会通信.html" class="nav-link">大都会通信</a>
+<a href="中美能源.html" class="nav-link">中美能源</a>
+<a href="伯克希尔哈撒韦能源.html" class="nav-link">伯克希尔哈撒韦能源</a>
+<a href="克莱顿房屋.html" class="nav-link">克莱顿房屋</a>
+<a href="马蒙集团.html" class="nav-link">马蒙集团</a>
 </div>
-<div class="nav-footer"><span>📚 巴菲特知识库</span></div>
+</div>
+<div class="nav-group">
+<div class="nav-group-title" onclick="toggleNav(this)"><span class="caret"></span>关键人物<span class="badge">7</span></div>
+<div class="nav-group-items">
+<a href="../people/芒格.html" class="nav-link">芒格</a>
+<a href="../people/格雷厄姆.html" class="nav-link">格雷厄姆</a>
+</div>
+</div>
+</div>
 </aside>
+
 <main class="main">
 <div class="page-header">
-<h1>🏢 投资案例分析</h1>
-<p>巴菲特投资过的公司案例，了解价值投资在实际中的应用</p>
+<h1>🏢 投资公司</h1>
+<p class="subtitle">伯克希尔哈撒韦投资组合中的公司详细分析</p>
 </div>
 
-<div class="browse-grid">
-<a href="伯克希尔哈撒韦.html" class="browse-card"><div class="browse-icon">🏢</div><h3>伯克希尔哈撒韦</h3><p>巴菲特的核心投资，从纺织厂到保险帝国</p></a>
-<a href="盖可保险.html" class="browse-card"><div class="browse-icon">🛡️</div><h3>盖可保险</h3><p>GEICO直销车险的传奇投资</p></a>
-<a href="可口可乐.html" class="browse-card"><div class="browse-icon">🥤</div><h3>可口可乐</h3><p>最经典的价值投资案例之一</p></a>
-<a href="美国运通.html" class="browse-card"><div class="browse-icon">💳</div><h3>美国运通</h3><p>1964年危机中的逆向投资</p></a>
-<a href="苹果.html" class="browse-card"><div class="browse-icon">📱</div><h3>苹果</h3><p>科技股投资的成功转型</p></a>
-<a href="富国银行.html" class="browse-card"><div class="browse-icon">🏦</div><h3>富国银行</h3><p>银行业投资的经典案例</p></a>
-<a href="比亚迪.html" class="browse-card"><div class="browse-icon">🚗</div><h3>比亚迪</h3><p>中国新能源汽车的早期投资</p></a>
-<a href="穆迪.html" class="browse-card"><div class="browse-icon">📊</div><h3>穆迪</h3><p>评级机构的护城河分析</p></a>
-<a href="内布拉斯加家具店.html" class="browse-card"><div class="browse-icon">🛋️</div><h3>内布拉斯加家具店</h3><p>B夫人的传奇故事</p></a>
-<a href="华盛顿邮报.html" class="browse-card"><div class="browse-icon">📰</div><h3>华盛顿邮报</h3><p>媒体行业的价值投资</p></a>
-<a href="喜诗糖果.html" class="browse-card"><div class="browse-icon">🍫</div><h3>喜诗糖果</h3><p>理解特许经营权的启蒙案例</p></a>
-<a href="波仙珠宝.html" class="browse-card"><div class="browse-icon">💎</div><h3>波仙珠宝</h3><p>奥马哈本地的投资明珠</p></a>
-<a href="国民保险公司.html" class="browse-card"><div class="browse-icon">📋</div><h3>国民保险公司</h3><p>再保险业务的支柱</p></a>
-<a href="冰雪皇后.html" class="browse-card"><div class="browse-icon">🍦</div><h3>冰雪皇后</h3><p>快餐连锁的投资案例</p></a>
-<a href="布法罗新闻报.html" class="browse-card"><div class="browse-icon">📰</div><h3>布法罗新闻报</h3><p>报纸行业的长期投资</p></a>
-<a href="通用再保险.html" class="browse-card"><div class="browse-icon">🔄</div><h3>通用再保险</h3><p>2001年重大收购</p></a>
-<a href="韦斯科.html" class="browse-card"><div class="browse-icon">🏭</div><h3>韦斯科</h3><p>早期控股的多元化企业</p></a>
-<a href="大都会通信.html" class="browse-card"><div class="browse-icon">📡</div><h3>大都会通信</h3><p>有线电视时代的投资</p></a>
-<a href="中美能源.html" class="browse-card"><div class="browse-icon">⚡</div><h3>中美能源</h3><p>公用事业领域的投资</p></a>
-<a href="伯克希尔哈撒韦能源.html" class="browse-card"><div class="browse-icon">⚡</div><h3>伯克希尔哈撒韦能源</h3><p>能源业务的核心平台</p></a>
-<a href="克莱顿房屋.html" class="browse-card"><div class="browse-icon">🏠</div><h3>克莱顿房屋</h3><p>预制房屋行业的领导者</p></a>
-<a href="BNSF铁路.html" class="browse-card"><div class="browse-icon">🚂</div><h3>BNSF铁路</h3><p>2010年铁路大收购</p></a>
-<a href="卡夫亨氏.html" class="browse-card"><div class="browse-icon">🧀</div><h3>卡夫亨氏</h3><p>食品行业的整合者</p></a>
-<a href="苹果.html" class="browse-card"><div class="browse-icon">📱</div><h3>美国银行</h3><p>2011年后的大型投资</p></a>
-<a href="吉列.html" class="browse-card"><div class="browse-icon">🪒</div><h3>吉列</h3><p>剃须刀行业的收购案例</p></a>
-<a href="世界图书百科全书.html" class="browse-card"><div class="browse-icon">📚</div><h3>世界图书百科全书</h3><p>百科全书行业的变迁</p></a>
-<a href="中国石油.html" class="browse-card"><div class="browse-icon">🛢️</div><h3>中国石油</h3><p>2002-2007年的投资</p></a>
-<a href="伊斯卡.html" class="browse-card"><div class="browse-icon">🔧</div><h3>伊斯卡</h3><p>金属切削工具的收购</p></a>
-<a href="伊藤忠商事.html" class="browse-card"><div class="browse-icon">🏢</div><h3>伊藤忠商事</h3><p>日本综合商社の投资</p></a>
-<a href="IBM.html" class="browse-card"><div class="browse-icon">💻</div><h3>IBM</h3><p>科技股的重新评估</p></a>
-<a href="利捷航空.html" class="browse-card"><div class="browse-icon">✈️</div><h3>利捷航空</h3><p>公务机服务的投资</p></a>
-<a href="威利家居.html" class="browse-card"><div class="browse-icon">🏠</div><h3>威利家居</h3><p>房车地板制造商</p></a>
-<a href="威瑞森通讯.html" class="browse-card"><div class="browse-icon">📞</div><h3>威瑞森通讯</h3><p>电信运营商投资</p></a>
-<a href="州立农业保险.html" class="browse-card"><div class="browse-icon">🌾</div><h3>州立农业保险</h3><p>农业保险公司</p></a>
-<a href="康菲石油.html" class="browse-card"><div class="browse-icon">🛢️</div><h3>康菲石油</h3><p>石油公司的投资</p></a>
-<a href="德克斯特鞋业.html" class="browse-card"><div class="browse-icon">👞</div><h3>德克斯特鞋业</h3><p>鞋业收购的教训</p></a>
-<a href="房地美.html" class="browse-card"><div class="browse-icon">🏦</div><h3>房地美</h3><p>抵押贷款公司的投资</p></a>
-<a href="所罗门.html" class="browse-card"><div class="browse-icon">🏛️</div><h3>所罗门</h3><p>1991年国债危机救援</p></a>
-<a href="斯科特费泽.html" class="browse-card"><div class="browse-icon">📦</div><h3>斯科特费泽</h3><p>消费品公司的收购</p></a>
-<a href="森林河公司.html" class="browse-card"><div class="browse-icon">🌲</div><h3>森林河公司</h3><p>房车制造商</p></a>
-<a href="特许通讯.html" class="browse-card"><div class="browse-icon">📡</div><h3>特许通讯</h3><p>有线电视运营商</p></a>
-<a href="科比吸尘器.html" class="browse-card"><div class="browse-icon">🧹</div><h3>科比吸尘器</h3><p>真空吸尘器制造商</p></a>
-<a href="精密铸件.html" class="browse-card"><div class="browse-icon">⚙️</div><h3>精密铸件</h3><p>航空零部件制造商</p></a>
-<a href="约翰斯曼维尔.html" class="browse-card"><div class="browse-icon">🧵</div><h3>约翰斯曼维尔</h3><p>建筑材料公司</p></a>
-<a href="纽约梅隆银行.html" class="browse-card"><div class="browse-icon">🏛️</div><h3>纽约梅隆银行</h3><p>大型银行的少数股权投资</p></a>
-<a href="美国合众银行.html" class="browse-card"><div class="browse-icon">🏦</div><h3>美国合众银行</h3><p>区域性银行投资</p></a>
-<a href="美国家庭服务.html" class="browse-card"><div class="browse-icon">🏠</div><h3>美国家庭服务</h3><p>家居服务公司</p></a>
-<a href="蓝筹印花.html" class="browse-card"><div class="browse-icon">🎫</div><h3>蓝筹印花</h3><p>印花奖励公司</p></a>
-<a href="西方石油.html" class="browse-card"><div class="browse-icon">🛢️</div><h3>西方石油</h3><p>石油公司的最新投资</p></a>
-<a href="费希海默制服.html" class="browse-card"><div class="browse-icon">👔</div><h3>费希海默制服</h3><p>制服租赁公司</p></a>
-<a href="路博润.html" class="browse-card"><div class="browse-icon">⚗️</div><h3>路博润</h3><p>特种化学品公司</p></a>
-<a href="通用汽车.html" class="browse-card"><div class="browse-icon">🚗</div><h3>通用汽车</h3><p>汽车制造商的投资</p></a>
-<a href="通用电气.html" class="browse-card"><div class="browse-icon">⚡</div><h3>通用电气</h3><p>工业巨头的投资</p></a>
-<a href="雪佛龙.html" class="browse-card"><div class="browse-icon">🛢️</div><h3>雪佛龙</h3><p>石油巨头投资</p></a>
-<a href="飞安公司.html" class="browse-card"><div class="browse-icon">✈️</div><h3>飞安公司</h3><p>飞行训练公司</p></a>
-<a href="马蒙集团.html" class="browse-card"><div class="browse-icon">🏢</div><h3>马蒙集团</h3><p>工业集团收购</p></a>
-<a href="高盛.html" class="browse-card"><div class="browse-icon">💰</div><h3>高盛</h3><p>2008年金融危机投资</p></a>
-<a href="鲜果布衣.html" class="browse-card"><div class="browse-icon">👕</div><h3>鲜果布衣</h3><p>服装品牌投资</p></a>
-<a href="麦克莱恩.html" class="browse-card"><div class="browse-icon">🏪</div><h3>麦克莱恩</h3><p>供应链服务公司</p></a>
+<div class="stats-grid">
+<div class="stat-card"><span class="stat-value">62</span><span class="stat-label">投资公司</span></div>
+</div>
+
+<div class="feature-grid">
+<a href="../browse.html#companies" class="feature-card">
+<div class="feature-icon">📋</div>
+<h3>公司总览</h3>
+<p>浏览所有投资公司</p>
+</a>
+<a href="../index.html" class="feature-card">
+<div class="feature-icon">🏠</div>
+<h3>返回首页</h3>
+<p>回到知识库首页</p>
+</a>
+</div>
+
+<div class="content-section">
+<h2>📋 全部公司列表</h2>
+<div class="tag-list">
+<a href="伯克希尔哈撒韦.html" class="tag">伯克希尔哈撒韦</a>
+<a href="盖可保险.html" class="tag">盖可保险</a>
+<a href="可口可乐.html" class="tag">可口可乐</a>
+<a href="美国运通.html" class="tag">美国运通</a>
+<a href="苹果.html" class="tag">苹果</a>
+<a href="富国银行.html" class="tag">富国银行</a>
+<a href="美国银行.html" class="tag">美国银行</a>
+<a href="比亚迪.html" class="tag">比亚迪</a>
+<a href="BNSF铁路.html" class="tag">BNSF铁路</a>
+<a href="穆迪.html" class="tag">穆迪</a>
+<a href="内布拉斯加家具店.html" class="tag">内布拉斯加家具店</a>
+<a href="华盛顿邮报.html" class="tag">华盛顿邮报</a>
+<a href="波仙珠宝.html" class="tag">波仙珠宝</a>
+<a href="国民保险公司.html" class="tag">国民保险公司</a>
+<a href="冰雪皇后.html" class="tag">冰雪皇后</a>
+<a href="布法罗新闻报.html" class="tag">布法罗新闻报</a>
+<a href="通用再保险.html" class="tag">通用再保险</a>
+<a href="韦斯科.html" class="tag">韦斯科</a>
+<a href="大都会通信.html" class="tag">大都会通信</a>
+<a href="中美能源.html" class="tag">中美能源</a>
+<a href="伯克希尔哈撒韦能源.html" class="tag">伯克希尔哈撒韦能源</a>
+<a href="克莱顿房屋.html" class="tag">克莱顿房屋</a>
+<a href="马蒙集团.html" class="tag">马蒙集团</a>
+<a href="Marmon%20Group.html" class="tag">Marmon Group</a>
+<a href="Lubrizol.html" class="tag">Lubrizol</a>
+<a href="Iscar.html" class="tag">Iscar</a>
+<a href="Berkshire%20Hathaway%20Energy.html" class="tag">BHE</a>
+</div>
 </div>
 </main>
-<script src="../nav.js"></script>
+</div>
+
+<script>
+function toggleNav(el) {
+  el.classList.toggle('open');
+  el.nextElementSibling.classList.toggle('open');
+}
+</script>
 </body>
 </html>

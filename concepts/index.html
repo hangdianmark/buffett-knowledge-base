@@ -3,31 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>核心投资概念 - 巴菲特知识库</title>
+<title>核心概念 - 巴菲特知识库</title>
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<button class="hamburger" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
-<aside class="sidebar" id="sidebar">
-<div class="sidebar-header"><a href="../index.html" class="logo">📚 巴菲特知识库</a></div>
-<div class="sidebar-nav">
-<a href="../index.html" class="nav-link nav-home">🏠 首页</a>
+<button class="hamburger" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+
+<header class="top-header">
+<div class="top-header-inner">
+<h1>📚 巴菲特致股东信知识库</h1>
+<nav class="top-nav">
+<a href="../index.html">🏠 首页</a>
+<a href="../browse.html">💡 核心思想</a>
+<a href="../about.html">ℹ️ 关于</a>
+</nav>
+</div>
+</header>
+
+<div class="layout">
+<aside class="sidebar">
+<div class="sidebar-section">
 <div class="nav-group">
-<div class="nav-group-title" onclick="toggle('索引')"><span class="caret"></span>索引<span class="badge">2</span></div>
-<div class="nav-group-items" id="索引">
-<a href="../partnership.html" class="nav-link">合伙人信专门页面</a>
-<a href="../browse.html" class="nav-link">内容浏览</a>
-</div></div>
+<div class="nav-group-title" onclick="toggleNav(this)"><span class="caret"></span>合伙人信<span class="badge">17</span></div>
+<div class="nav-group-items">
+<a href="../partnership/1956-有限合伙协议.html" class="nav-link">1956 有限合伙协议</a>
+<a href="../partnership/1957-巴菲特致合伙人信.html" class="nav-link">1957 巴菲特致合伙人信</a>
+<a href="../partnership/1958-巴菲特致合伙人信.html" class="nav-link">1958 巴菲特致合伙人信</a>
+</div>
+</div>
 <div class="nav-group">
-<div class="nav-group-title" onclick="toggle('02_伯克希尔股东信')"><span class="caret"></span>伯克希尔股东信<span class="badge">60</span></div>
-<div class="nav-group-items" id="02_伯克希尔股东信">
+<div class="nav-group-title" onclick="toggleNav(this)"><span class="caret"></span>伯克希尔股东信<span class="badge">60</span></div>
+<div class="nav-group-items">
 <a href="../berkshire/1965-巴菲特致股东信.html" class="nav-link">1965 巴菲特致股东信</a>
 <a href="../berkshire/2014-巴菲特致股东信.html" class="nav-link">2014 巴菲特致股东信</a>
 <a href="../berkshire/2024-巴菲特致股东信.html" class="nav-link">2024 巴菲特致股东信</a>
-</div></div>
+</div>
+</div>
 <div class="nav-group">
-<div class="nav-group-title" onclick="toggle('04_概念')"><span class="caret"></span>核心概念<span class="badge open">35</span></div>
-<div class="nav-group-items open" id="04_概念">
+<div class="nav-group-title open" onclick="toggleNav(this)"><span class="caret"></span>核心概念<span class="badge">35</span></div>
+<div class="nav-group-items open">
 <a href="内在价值.html" class="nav-link">内在价值</a>
 <a href="安全边际.html" class="nav-link">安全边际</a>
 <a href="护城河.html" class="nav-link">护城河</a>
@@ -51,66 +65,96 @@
 <a href="品牌.html" class="nav-link">品牌</a>
 <a href="商业模式.html" class="nav-link">商业模式</a>
 <a href="企业文化.html" class="nav-link">企业文化</a>
-<a href="承保纪律.html" class="nav-link">承保纪律</a>
-<a href="有效市场.html" class="nav-link">有效市场</a>
-<a href="市场预测.html" class="nav-link">市场预测</a>
-<a href="衍生品.html" class="nav-link">衍生品</a>
-<a href="收购.html" class="nav-link">收购</a>
-<a href="股息.html" class="nav-link">股息</a>
-<a href="市盈率.html" class="nav-link">市盈率</a>
-<a href="买入价格.html" class="nav-link">买入价格</a>
-<a href="低估.html" class="nav-link">低估</a>
-<a href="竞争优势.html" class="nav-link">竞争优势</a>
-<a href="股东导向.html" class="nav-link">股东导向</a>
-<a href="纺织业务.html" class="nav-link">纺织业务</a>
-</div></div>
 </div>
-<div class="nav-footer"><span>📚 巴菲特知识库</span></div>
+</div>
+<div class="nav-group">
+<div class="nav-group-title" onclick="toggleNav(this)"><span class="caret"></span>投资公司<span class="badge">62</span></div>
+<div class="nav-group-items">
+<a href="../companies/伯克希尔哈撒韦.html" class="nav-link">伯克希尔哈撒韦</a>
+<a href="../companies/可口可乐.html" class="nav-link">可口可乐</a>
+<a href="../companies/苹果.html" class="nav-link">苹果</a>
+</div>
+</div>
+<div class="nav-group">
+<div class="nav-group-title" onclick="toggleNav(this)"><span class="caret"></span>关键人物<span class="badge">7</span></div>
+<div class="nav-group-items">
+<a href="../people/芒格.html" class="nav-link">芒格</a>
+<a href="../people/格雷厄姆.html" class="nav-link">格雷厄姆</a>
+</div>
+</div>
+</div>
 </aside>
+
 <main class="main">
 <div class="page-header">
 <h1>💡 核心投资概念</h1>
-<p>巴菲特投资哲学的核心概念，理解价值投资的底层逻辑</p>
+<p class="subtitle">巴菲特投资理念的核心理论和思维模型</p>
 </div>
 
-<div class="browse-grid">
-<a href="内在价值.html" class="browse-card"><div class="browse-icon">💎</div><h3>内在价值</h3><p>企业价值评估的核心，决定投资安全边际的基础</p></a>
-<a href="安全边际.html" class="browse-card"><div class="browse-icon">🛡️</div><h3>安全边际</h3><p>格雷厄姆投资哲学的基石，风险控制的核心原则</p></a>
-<a href="护城河.html" class="browse-card"><div class="browse-icon">🏰</div><h3>护城河</h3><p>企业竞争优势的来源，决定长期盈利能力</p></a>
-<a href="市场先生.html" class="browse-card"><div class="browse-icon">📈</div><h3>市场先生</h3><p>市场波动创造投资机会，利用情绪而非被其控制</p></a>
-<a href="能力圈.html" class="browse-card"><div class="browse-icon">🎯</div><h3>能力圈</h3><p>只投资自己理解的企业，不懂不投的原则</p></a>
-<a href="管理层.html" class="browse-card"><div class="browse-icon">👔</div><h3>管理层</h3><p>优秀管理层创造价值，是投资决策的关键因素</p></a>
-<a href="资本配置.html" class="browse-card"><div class="browse-icon">💰</div><h3>资本配置</h3><p>管理层最重要的能力，决定股东价值创造</p></a>
-<a href="保险浮存金.html" class="browse-card"><div class="browse-icon">�保险公司</div><h3>保险浮存金</h3><p>伯克希尔的秘密武器，低成本资金来源</p></a>
-<a href="复利.html" class="browse-card"><div class="browse-icon">📊</div><h3>复利</h3><p>世界第八大奇迹，长期投资的核心动力</p></a>
-<a href="长期持有.html" class="browse-card"><div class="browse-icon">⏳</div><h3>长期持有</h3><p>陪伴优质企业成长，享受复利的力量</p></a>
-<a href="回购.html" class="browse-card"><div class="browse-icon">🔄</div><h3>回购</h3><p>资本配置方式之一，提升股东价值</p></a>
-<a href="留存收益.html" class="browse-card"><div class="browse-icon">💵</div><h3>留存收益</h3><p>再投资的利润，股东财富的隐形来源</p></a>
-<a href="特许经营权.html" class="browse-card"><div class="browse-icon">🎫</div><h3>特许经营权</h3><p>企业定价权的来源，护城河的具体形式</p></a>
-<a href="分散投资.html" class="browse-card"><div class="browse-icon">🎲</div><h3>分散投资</h3><p>适度分散 vs 集中投资，能力圈内的配置</p></a>
-<a href="集中投资.html" class="browse-card"><div class="browse-icon">🎯</div><h3>集中投资</h3><p>将鸡蛋放在少数篮子里，并看好篮子</p></a>
-<a href="杠杆.html" class="browse-card"><div class="browse-icon">⚖️</div><h3>杠杆</h3><p>使用他人资金的风险与回报分析</p></a>
-<a href="通货膨胀.html" class="browse-card"><div class="browse-icon">📈</div><h3>通货膨胀</h3><p>侵蚀购买力的敌人，如何对冲通胀风险</p></a>
-<a href="账面价值.html" class="browse-card"><div class="browse-icon">📒</div><h3>账面价值</h3><p>会计记录的企业价值，与内在价值的关系</p></a>
-<a href="透视盈余.html" class="browse-card"><div class="browse-icon">🔍</div><h3>透视盈余</h3><p>衡量子公司真实贡献的指标</p></a>
-<a href="商誉.html" class="browse-card"><div class="browse-icon">🏷️</div><h3>商誉</h3><p>收购价格超出账面价值的部分，解读方式</p></a>
-<a href="品牌.html" class="browse-card"><div class="browse-icon">⭐</div><h3>品牌</h3><p>企业最宝贵的无形资产之一</p></a>
-<a href="商业模式.html" class="browse-card"><div class="browse-icon">📋</div><h3>商业模式</h3><p>理解企业如何赚钱的本质</p></a>
-<a href="企业文化.html" class="browse-card"><div class="browse-icon">🏛️</div><h3>企业文化</h3><p>长期成功的隐形驱动力</p></a>
-<a href="承保纪律.html" class="browse-card"><div class="browse-icon">📝</div><h3>承保纪律</h3><p>保险业务成功的关键</p></a>
-<a href="有效市场.html" class="browse-card"><div class="browse-icon">💹</div><h3>有效市场</h3><p>对市场效率假说的批判性思考</p></a>
-<a href="市场预测.html" class="browse-card"><div class="browse-icon">🔮</div><h3>市场预测</h3><p>短期预测的困难与应对</p></a>
-<a href="衍生品.html" class="browse-card"><div class="browse-icon">📜</div><h3>衍生品</h3><p>金融工具的风险与警示</p></a>
-<a href="收购.html" class="browse-card"><div class="browse-icon">🤝</div><h3>收购</h3><p>企业扩张的策略与陷阱</p></a>
-<a href="股息.html" class="browse-card"><div class="browse-icon">💵</div><h3>股息</h3><p>现金回报与再投资的权衡</p></a>
-<a href="市盈率.html" class="browse-card"><div class="browse-icon">📐</div><h3>市盈率</h3><p>估值指标的使用与局限</p></a>
-<a href="买入价格.html" class="browse-card"><div class="browse-icon">💲</div><h3>买入价格</h3><p>投资成功的第一要素</p></a>
-<a href="低估.html" class="browse-card"><div class="browse-icon">📉</div><h3>低估</h3><p>价值发现与均值回归</p></a>
-<a href="竞争优势.html" class="browse-card"><div class="browse-icon">🏆</div><h3>竞争优势</h3><p>企业持续获胜的关键</p></a>
-<a href="股东导向.html" class="browse-card"><div class="browse-icon">👥</div><h3>股东导向</h3><p>管理层与股东利益一致的重要性</p></a>
-<a href="纺织业务.html" class="browse-card"><div class="browse-icon">🧵</div><h3>纺织业务</h3><p>伯克希尔曾经的起点与教训</p></a>
+<div class="stats-grid">
+<div class="stat-card"><span class="stat-value">35</span><span class="stat-label">核心概念</span></div>
+</div>
+
+<div class="feature-grid">
+<a href="../browse.html#concepts" class="feature-card">
+<div class="feature-icon">📋</div>
+<h3>概念总览</h3>
+<p>浏览所有核心概念</p>
+</a>
+<a href="../index.html" class="feature-card">
+<div class="feature-icon">🏠</div>
+<h3>返回首页</h3>
+<p>回到知识库首页</p>
+</a>
+</div>
+
+<div class="content-section">
+<h2>📚 全部概念列表</h2>
+<div class="tag-list">
+<a href="内在价值.html" class="tag">内在价值</a>
+<a href="安全边际.html" class="tag">安全边际</a>
+<a href="护城河.html" class="tag">护城河</a>
+<a href="市场先生.html" class="tag">市场先生</a>
+<a href="能力圈.html" class="tag">能力圈</a>
+<a href="管理层.html" class="tag">管理层</a>
+<a href="资本配置.html" class="tag">资本配置</a>
+<a href="保险浮存金.html" class="tag">保险浮存金</a>
+<a href="复利.html" class="tag">复利</a>
+<a href="长期持有.html" class="tag">长期持有</a>
+<a href="回购.html" class="tag">回购</a>
+<a href="留存收益.html" class="tag">留存收益</a>
+<a href="特许经营权.html" class="tag">特许经营权</a>
+<a href="分散投资.html" class="tag">分散投资</a>
+<a href="集中投资.html" class="tag">集中投资</a>
+<a href="杠杆.html" class="tag">杠杆</a>
+<a href="通货膨胀.html" class="tag">通货膨胀</a>
+<a href="账面价值.html" class="tag">账面价值</a>
+<a href="透视盈余.html" class="tag">透视盈余</a>
+<a href="商誉.html" class="tag">商誉</a>
+<a href="品牌.html" class="tag">品牌</a>
+<a href="商业模式.html" class="tag">商业模式</a>
+<a href="企业文化.html" class="tag">企业文化</a>
+<a href="承保纪律.html" class="tag">承保纪律</a>
+<a href="有效市场.html" class="tag">有效市场</a>
+<a href="市场预测.html" class="tag">市场预测</a>
+<a href="衍生品.html" class="tag">衍生品</a>
+<a href="收购.html" class="tag">收购</a>
+<a href="股息.html" class="tag">股息</a>
+<a href="市盈率.html" class="tag">市盈率</a>
+<a href="买入价格.html" class="tag">买入价格</a>
+<a href="低估.html" class="tag">低估</a>
+<a href="竞争优势.html" class="tag">竞争优势</a>
+<a href="股东导向.html" class="tag">股东导向</a>
+</div>
 </div>
 </main>
-<script src="../nav.js"></script>
+</div>
+
+<script>
+function toggleNav(el) {
+  el.classList.toggle('open');
+  el.nextElementSibling.classList.toggle('open');
+}
+</script>
 </body>
 </html>

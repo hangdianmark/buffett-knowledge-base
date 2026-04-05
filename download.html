@@ -5,161 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>下载 - 巴菲特知识库</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/download.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <i class="fas fa-chart-line"></i>
-                <span>巴菲特智慧库</span>
-            </div>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> 首页</a>
-                <a href="browse.html" class="nav-link"><i class="fas fa-brain"></i> 核心概念</a>
-                <a href="search.html" class="nav-link"><i class="fas fa-search"></i> 搜索</a>
-                <a href="download.html" class="nav-link active"><i class="fas fa-download"></i> 下载</a>
-            </div>
-            <button class="nav-toggle" id="navToggle">
+    <!-- 左侧导航栏 -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="sidebar-logo">
+                <i class="fas fa-book-open"></i>
+                <span>巴菲特知识库</span>
+            </a>
+            <button class="sidebar-toggle" id="sidebarToggle">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-    </nav>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <h3 class="nav-section-title">导航</h3>
+                <a href="index.html" class="nav-item"><i class="fas fa-home"></i> 首页</a>
+                <a href="browse.html" class="nav-item"><i class="fas fa-compass"></i> 浏览</a>
+                <a href="partnership.html" class="nav-item"><i class="fas fa-handshake"></i> 合伙人信</a>
+                <a href="search.html" class="nav-item"><i class="fas fa-search"></i> 搜索</a>
+            </div>
+            <div class="nav-section">
+                <h3 class="nav-section-title">资源</h3>
+                <a href="about.html" class="nav-item"><i class="fas fa-info-circle"></i> 关于</a>
+                <a href="download.html" class="nav-item active"><i class="fas fa-download"></i> 下载</a>
+            </div>
+            <div class="nav-section">
+                <h3 class="nav-section-title">伯克希尔</h3>
+                <a href="berkshire/index.html" class="nav-item"><i class="fas fa-building"></i> 股东信</a>
+                <a href="special/index.html" class="nav-item"><i class="fas fa-star"></i> 专题</a>
+            </div>
+        </nav>
+    </aside>
 
-    <!-- 下载页面头部 -->
-    <header class="download-header">
-        <div class="container">
-            <h1 class="download-title">下载完整知识库</h1>
-            <p class="download-subtitle">一次性下载，永久拥有巴菲特60年投资智慧</p>
-        </div>
+    <!-- 移动端顶部栏 -->
+    <header class="mobile-header">
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <span class="mobile-title">巴菲特知识库</span>
     </header>
 
-    <!-- 下载内容 -->
-    <main class="download-content">
-        <div class="container">
+    <!-- 主内容区 -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <!-- 页面标题区 -->
+            <header class="page-header">
+                <div class="breadcrumb">
+                    <a href="index.html">首页</a> / 下载
+                </div>
+                <h1><i class="fas fa-download"></i> 下载完整知识库</h1>
+                <p class="page-subtitle">一次性下载，永久拥有巴菲特60年投资智慧</p>
+            </header>
+
             <!-- 下载选项 -->
-            <div class="download-options">
-                <div class="download-card standard-card">
-                    <div class="download-card-header">
+            <section class="content-section">
+                <h2><i class="fas fa-file-archive"></i> 下载选项</h2>
+                <div class="download-options">
+                    <div class="download-card">
+                        <div class="download-card-badge">推荐</div>
                         <i class="fas fa-file-archive"></i>
-                        <h2>标准版</h2>
-                        <div class="download-badge">推荐</div>
-                    </div>
-                    <div class="download-card-body">
-                        <ul class="download-features">
+                        <h3>标准版</h3>
+                        <ul>
                             <li><i class="fas fa-check"></i> 完整HTML网站格式</li>
                             <li><i class="fas fa-check"></i> 包含所有186个页面</li>
                             <li><i class="fas fa-check"></i> 本地搜索功能</li>
                             <li><i class="fas fa-check"></i> 响应式设计</li>
                             <li><i class="fas fa-check"></i> 永久离线可用</li>
                         </ul>
-                        <div class="download-info">
-                            <div class="info-item">
-                                <i class="fas fa-hdd"></i>
-                                <span>大小：约 12 MB</span>
-                            </div>
-                            <div class="info-item">
-                                <i class="fas fa-file"></i>
-                                <span>文件数：192个</span>
-                            </div>
-                            <div class="info-item">
-                                <i class="fas fa-calendar-alt"></i>
-                                <span>更新：2026年4月</span>
-                            </div>
+                        <div class="download-meta">
+                            <span><i class="fas fa-hdd"></i> 约 12 MB</span>
+                            <span><i class="fas fa-file"></i> 192个文件</span>
                         </div>
                         <button class="btn btn-primary download-btn" data-version="standard">
-                            <i class="fas fa-download"></i> 下载标准版 (ZIP)
+                            <i class="fas fa-download"></i> 下载标准版
                         </button>
-                        <p class="download-note">解压后双击 index.html 即可使用</p>
                     </div>
-                </div>
-                
-                <div class="download-card mobile-card">
-                    <div class="download-card-header">
+
+                    <div class="download-card">
+                        <div class="download-card-badge">轻量</div>
                         <i class="fas fa-mobile-alt"></i>
-                        <h2>移动版</h2>
-                        <div class="download-badge">轻量</div>
-                    </div>
-                    <div class="download-card-body">
-                        <ul class="download-features">
+                        <h3>移动版</h3>
+                        <ul>
                             <li><i class="fas fa-check"></i> 优化移动端体验</li>
                             <li><i class="fas fa-check"></i> 包含所有内容页面</li>
                             <li><i class="fas fa-check"></i> 简化导航系统</li>
                             <li><i class="fas fa-check"></i> 更快的加载速度</li>
                             <li><i class="fas fa-check"></i> 省电模式优化</li>
                         </ul>
-                        <div class="download-info">
-                            <div class="info-item">
-                                <i class="fas fa-hdd"></i>
-                                <span>大小：约 8 MB</span>
-                            </div>
-                            <div class="info-item">
-                                <i class="fas fa-file"></i>
-                                <span>文件数：186个</span>
-                            </div>
-                            <div class="info-item">
-                                <i class="fas fa-calendar-alt"></i>
-                                <span>更新：2026年4月</span>
-                            </div>
+                        <div class="download-meta">
+                            <span><i class="fas fa-hdd"></i> 约 8 MB</span>
+                            <span><i class="fas fa-file"></i> 186个文件</span>
                         </div>
                         <button class="btn btn-secondary download-btn" data-version="mobile">
-                            <i class="fas fa-download"></i> 下载移动版 (ZIP)
+                            <i class="fas fa-download"></i> 下载移动版
                         </button>
-                        <p class="download-note">专为手机和平板优化</p>
                     </div>
                 </div>
-                
-                <div class="download-card offline-card">
-                    <div class="download-card-header">
-                        <i class="fas fa-wifi-slash"></i>
-                        <h2>离线阅读器</h2>
-                        <div class="download-badge">专业</div>
-                    </div>
-                    <div class="download-card-body">
-                        <ul class="download-features">
-                            <li><i class="fas fa-check"></i> 支持所有阅读器应用</li>
-                            <li><i class="fas fa-check"></i> EPUB/MOBI/PDF格式</li>
-                            <li><i class="fas fa-check"></i> 目录和书签功能</li>
-                            <li><i class="fas fa-check"></i> 夜间阅读模式</li>
-                            <li><i class="fas fa-check"></i> 字体大小调整</li>
-                        </ul>
-                        <div class="download-info">
-                            <div class="info-item">
-                                <i class="fas fa-hdd"></i>
-                                <span>大小：约 15 MB</span>
-                            </div>
-                            <div class="info-item">
-                                <i class="fas fa-file"></i>
-                                <span>格式：3种格式</span>
-                            </div>
-                            <div class="info-item">
-                                <i class="fas fa-calendar-alt"></i>
-                                <span>更新：2026年4月</span>
-                            </div>
-                        </div>
-                        <button class="btn btn-outline download-btn" data-version="ebook">
-                            <i class="fas fa-download"></i> 下载电子书版
-                        </button>
-                        <p class="download-note">支持Kindle、iPad等设备</p>
-                    </div>
-                </div>
-            </div>
-            
+            </section>
+
             <!-- 安装指南 -->
-            <div class="install-guide">
+            <section class="content-section">
                 <h2><i class="fas fa-laptop-code"></i> 安装和使用指南</h2>
-                <div class="guide-steps">
-                    <div class="step">
+                <div class="steps-list">
+                    <div class="step-item">
                         <div class="step-number">1</div>
                         <div class="step-content">
                             <h3>下载文件</h3>
                             <p>点击上方下载按钮，选择适合你需求的版本</p>
                         </div>
                     </div>
-                    <div class="step">
+                    <div class="step-item">
                         <div class="step-number">2</div>
                         <div class="step-content">
                             <h3>解压缩</h3>
@@ -169,7 +129,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="step">
+                    <div class="step-item">
                         <div class="step-number">3</div>
                         <div class="step-content">
                             <h3>开始使用</h3>
@@ -179,22 +139,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="step">
+                    <div class="step-item">
                         <div class="step-number">4</div>
                         <div class="step-content">
                             <h3>离线使用</h3>
                             <p>断开网络连接，所有功能仍可正常使用</p>
-                            <div class="tip">
+                            <div class="tip-box">
                                 <i class="fas fa-lightbulb"></i>
                                 <span>提示：可将文件夹拷贝到U盘，在任何电脑上使用</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
+            </section>
+
             <!-- 平台支持 -->
-            <div class="platform-support">
+            <section class="content-section">
                 <h2><i class="fas fa-desktop"></i> 平台支持</h2>
                 <div class="platform-grid">
                     <div class="platform-card">
@@ -236,10 +196,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            
+            </section>
+
             <!-- 常见问题 -->
-            <div class="download-faq">
+            <section class="content-section">
                 <h2><i class="fas fa-question-circle"></i> 常见问题</h2>
                 <div class="faq-list">
                     <div class="faq-item">
@@ -267,65 +227,31 @@
                         <p>完全不需要！所有内容都包含在下载的文件中，可以永久离线使用。</p>
                     </div>
                 </div>
-            </div>
-            
-            <!-- 系统要求 -->
-            <div class="system-requirements">
-                <h2><i class="fas fa-cogs"></i> 系统要求</h2>
-                <div class="requirements-grid">
-                    <div class="requirement">
-                        <i class="fas fa-microchip"></i>
-                        <h3>处理器</h3>
-                        <p>任何现代处理器</p>
-                    </div>
-                    <div class="requirement">
-                        <i class="fas fa-memory"></i>
-                        <h3>内存</h3>
-                        <p>512 MB RAM 或更高</p>
-                    </div>
-                    <div class="requirement">
-                        <i class="fas fa-hdd"></i>
-                        <h3>存储空间</h3>
-                        <p>20 MB 可用空间</p>
-                    </div>
-                    <div class="requirement">
-                        <i class="fas fa-globe"></i>
-                        <h3>浏览器</h3>
-                        <p>Chrome 60+ / Firefox 55+ / Safari 12+ / Edge 79+</p>
-                    </div>
-                </div>
-            </div>
-            
+            </section>
+
             <!-- 高级选项 -->
-            <div class="advanced-options">
+            <section class="content-section">
                 <h2><i class="fas fa-tools"></i> 高级选项</h2>
-                <div class="advanced-grid">
+                <div class="advanced-options">
                     <div class="advanced-card">
                         <h3><i class="fab fa-git-alt"></i> Git用户</h3>
                         <p>如果你是开发者，可以通过Git克隆完整仓库：</p>
                         <div class="code-block">
-                            <code>git clone https://github.com/buffett-knowledge-base/buffett-knowledge-base.git</code>
+                            <code>git clone https://github.com/hangdianmark/buffett-knowledge-base.git</code>
                         </div>
                     </div>
                     <div class="advanced-card">
-                        <h3><i class="fas fa-cloud-download-alt"></i> 增量更新</h3>
-                        <p>只下载新增内容，节省带宽：</p>
-                        <div class="code-block">
-                            <code>仅下载 updates/ 文件夹中的最新文件</code>
-                        </div>
-                    </div>
-                    <div class="advanced-card">
-                        <h3><i class="fas fa-language"></i> 多语言版本</h3>
-                        <p>正在开发英文、日文等多语言版本，敬请期待。</p>
-                        <div class="coming-soon">
-                            <span>开发中</span>
-                        </div>
+                        <h3><i class="fas fa-cloud-download-alt"></i> 在线访问</h3>
+                        <p>您也可以直接访问在线版本，无需下载：</p>
+                        <a href="https://hangdianmark.github.io/buffett-knowledge-base/" class="btn btn-sm" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> 访问在线版本
+                        </a>
                     </div>
                 </div>
-            </div>
-            
+            </section>
+
             <!-- 版权声明 -->
-            <div class="copyright-notice">
+            <section class="content-section">
                 <h2><i class="fas fa-balance-scale"></i> 版权声明</h2>
                 <div class="notice-content">
                     <p>本知识库基于公开资料整理，所有原始内容版权归原作者所有：</p>
@@ -334,79 +260,26 @@
                         <li>投资案例分析基于公开财务报表和媒体报道</li>
                         <li>本网站设计、整理和搜索功能由知识库团队创建</li>
                     </ul>
-                    <div class="license">
+                    <div class="license-box">
                         <h3><i class="fas fa-file-contract"></i> 许可协议</h3>
                         <p>本知识库采用 <strong>知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</strong> 授权。</p>
-                        <p>您可以：</p>
+                        <p><strong>您可以：</strong></p>
                         <ul>
                             <li><strong>分享</strong> — 在任何媒介以任何形式复制、发行本作品</li>
                             <li><strong>演绎</strong> — 修改、转换或以本作品为基础进行创作</li>
-                            <li>只要你遵守许可协议条款，许可人就无法收回你的这些权利。</li>
                         </ul>
-                        <p>惟须遵守下列条件：</p>
+                        <p><strong>须遵守条件：</strong></p>
                         <ul>
-                            <li><strong>署名</strong> — 您必须给出适当的署名，提供指向本许可协议的链接，同时标明是否（对原始作品）作了修改。您可以用任何合理的方式来署名，但是不得以任何方式暗示许可人为您或您的使用背书。</li>
-                            <li><strong>非商业性使用</strong> — 您不得将本作品用于商业目的。</li>
-                            <li><strong>相同方式共享</strong> — 如果您再混合、转换或者基于本作品进行创作，您必须基于与原先许可协议相同的许可协议 分发您贡献的作品。</li>
-                            <li><strong>没有附加限制</strong> — 您不得适用法律术语或者 技术措施 从而限制其他人做许可协议允许的事情。</li>
+                            <li><strong>署名</strong> — 您必须给出适当的署名</li>
+                            <li><strong>非商业性使用</strong> — 您不得将本作品用于商业目的</li>
+                            <li><strong>相同方式共享</strong> — 基于相同许可协议分发您贡献的作品</li>
                         </ul>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     </main>
 
-    <!-- 页脚 -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <i class="fas fa-chart-line"></i>
-                    <span>巴菲特智慧库</span>
-                    <p class="footer-description">
-                        一个完整的、离线的沃伦·巴菲特投资知识库，供终身学习使用。
-                    </p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-section">
-                        <h4>主要内容</h4>
-                        <a href="browse.html?category=concepts">核心概念</a>
-                        <a href="browse.html?category=companies">投资公司</a>
-                        <a href="browse.html?category=berkshire">股东信件</a>
-                        <a href="browse.html?category=partnership">合伙人信</a>
-                    </div>
-                    <div class="footer-section">
-                        <h4>实用工具</h4>
-                        <a href="search.html">全文搜索</a>
-                        <a href="random.html">随机阅读</a>
-                        <a href="timeline.html">时间线</a>
-                        <a href="download.html">下载</a>
-                    </div>
-                    <div class="footer-section">
-                        <h4>关于项目</h4>
-                        <a href="about.html">关于本站</a>
-                        <a href="sources.html">数据来源</a>
-                        <a href="updates.html">更新记录</a>
-                        <a href="contact.html">联系我们</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 巴菲特智慧库 · 本网站所有内容均为离线可用 · 基于公开资料整理</p>
-                <p class="footer-note">
-                    <i class="fas fa-download"></i>
-                    提示：下载后请勿用于商业用途，仅供学习和研究使用。
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- 回到顶部按钮 -->
-    <button class="back-to-top" id="backToTop">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <script src="js/main.js"></script>
-    <script src="js/download.js"></script>
+    <script src="nav.js"></script>
 </body>
 </html>

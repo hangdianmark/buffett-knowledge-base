@@ -5,172 +5,207 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>关于本站 - 巴菲特知识库</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <i class="fas fa-chart-line"></i>
-                <span>巴菲特智慧库</span>
-            </div>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> 首页</a>
-                <a href="browse.html" class="nav-link"><i class="fas fa-brain"></i> 核心概念</a>
-                <a href="search.html" class="nav-link"><i class="fas fa-search"></i> 搜索</a>
-                <a href="about.html" class="nav-link active"><i class="fas fa-info-circle"></i> 关于</a>
-            </div>
-            <button class="nav-toggle" id="navToggle">
+    <!-- 左侧导航栏 -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="sidebar-logo">
+                <i class="fas fa-book-open"></i>
+                <span>巴菲特知识库</span>
+            </a>
+            <button class="sidebar-toggle" id="sidebarToggle">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-    </nav>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <h3 class="nav-section-title">导航</h3>
+                <a href="index.html" class="nav-item"><i class="fas fa-home"></i> 首页</a>
+                <a href="browse.html" class="nav-item"><i class="fas fa-compass"></i> 浏览</a>
+                <a href="partnership.html" class="nav-item"><i class="fas fa-handshake"></i> 合伙人信</a>
+                <a href="search.html" class="nav-item"><i class="fas fa-search"></i> 搜索</a>
+            </div>
+            <div class="nav-section">
+                <h3 class="nav-section-title">资源</h3>
+                <a href="about.html" class="nav-item active"><i class="fas fa-info-circle"></i> 关于</a>
+                <a href="download.html" class="nav-item"><i class="fas fa-download"></i> 下载</a>
+            </div>
+            <div class="nav-section">
+                <h3 class="nav-section-title">伯克希尔</h3>
+                <a href="berkshire/index.html" class="nav-item"><i class="fas fa-building"></i> 股东信</a>
+                <a href="special/index.html" class="nav-item"><i class="fas fa-star"></i> 专题</a>
+            </div>
+        </nav>
+    </aside>
 
-    <!-- 关于页面头部 -->
-    <header class="about-header">
-        <div class="container">
-            <h1 class="about-title">关于巴菲特知识库</h1>
-            <p class="about-subtitle">一个完整的、离线的沃伦·巴菲特投资智慧库</p>
-        </div>
+    <!-- 移动端顶部栏 -->
+    <header class="mobile-header">
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <span class="mobile-title">巴菲特知识库</span>
     </header>
 
-    <!-- 关于内容 -->
-    <main class="about-content">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-card mission-card">
-                    <div class="about-card-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h2>项目使命</h2>
-                    <p>将沃伦·巴菲特60年投资智慧的精华完整保存下来，供所有投资者终身学习。我们相信最好的投资知识应该开放、免费、易于获取。</p>
+    <!-- 主内容区 -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <!-- 页面标题区 -->
+            <header class="page-header">
+                <div class="breadcrumb">
+                    <a href="index.html">首页</a> / 关于
                 </div>
-                
-                <div class="about-card content-card">
-                    <div class="about-card-icon">
-                        <i class="fas fa-book"></i>
+                <h1><i class="fas fa-info-circle"></i> 关于巴菲特知识库</h1>
+                <p class="page-subtitle">一个完整的、离线的沃伦·巴菲特投资智慧库</p>
+            </header>
+
+            <!-- 项目使命 -->
+            <section class="content-section">
+                <h2><i class="fas fa-bullseye"></i> 项目使命</h2>
+                <p>将沃伦·巴菲特60年投资智慧的精华完整保存下来，供所有投资者终身学习。我们相信最好的投资知识应该开放、免费、易于获取。</p>
+            </section>
+
+            <!-- 内容概要 -->
+            <section class="content-section">
+                <h2><i class="fas fa-book"></i> 内容概要</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">35</span>
+                        <span class="stat-label">核心概念</span>
                     </div>
-                    <h2>内容概要</h2>
-                    <ul>
-                        <li><strong>35个核心概念</strong>：价值投资、护城河、内在价值等</li>
-                        <li><strong>61家投资公司分析</strong>：可口可乐、苹果、美国运通等</li>
-                        <li><strong>60封伯克希尔股东信</strong>：1965-2024完整记录</li>
-                        <li><strong>17封早期合伙人信</strong>：1956-1964投资理念形成期</li>
-                        <li><strong>7位关键人物</strong>：查理·芒格、本杰明·格雷厄姆等</li>
-                        <li><strong>4封特别信件</strong>：危机时期的重要投资建议</li>
-                    </ul>
+                    <div class="stat-card">
+                        <span class="stat-number">61</span>
+                        <span class="stat-label">投资公司</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">60</span>
+                        <span class="stat-label">股东信</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">17</span>
+                        <span class="stat-label">合伙人信</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label">关键人物</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">特别信件</span>
+                    </div>
                 </div>
-                
-                <div class="about-card source-card">
-                    <div class="about-card-icon">
-                        <i class="fas fa-database"></i>
+            </section>
+
+            <!-- 核心特色 -->
+            <section class="content-section">
+                <h2><i class="fas fa-star"></i> 核心特色</h2>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <i class="fas fa-wifi-slash"></i>
+                        <div>
+                            <h3>完全离线可用</h3>
+                            <p>无需网络连接，随时随地学习</p>
+                        </div>
                     </div>
-                    <h2>数据来源</h2>
-                    <p>本知识库基于以下公开资源构建：</p>
-                    <ul>
-                        <li>伯克希尔·哈撒韦公司官方网站</li>
-                        <li>SEC公开文件数据库</li>
-                        <li>巴菲特历年股东信和公开演讲</li>
-                        <li>权威财经媒体报道和分析</li>
-                        <li>巴菲特授权的官方传记</li>
-                    </ul>
-                </div>
-                
-                <div class="about-card feature-card">
-                    <div class="about-card-icon">
-                        <i class="fas fa-star"></i>
+                    <div class="feature-item">
+                        <i class="fas fa-archive"></i>
+                        <div>
+                            <h3>永久保存</h3>
+                            <p>不受网站关闭影响，知识永不过期</p>
+                        </div>
                     </div>
-                    <h2>核心特色</h2>
-                    <ul>
-                        <li><strong>完全离线可用</strong>：无需网络连接</li>
-                        <li><strong>永久保存</strong>：不受网站关闭影响</li>
-                        <li><strong>易于分享</strong>：单个文件夹即可复制分享</li>
-                        <li><strong>响应式设计</strong>：手机、平板、电脑都完美适配</li>
-                        <li><strong>本地搜索</strong>：无需依赖在线搜索服务</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="about-tech">
-                <h2><i class="fas fa-cogs"></i> 技术实现</h2>
-                <div class="tech-grid">
-                    <div class="tech-item">
-                        <i class="fab fa-html5"></i>
-                        <h3>静态HTML</h3>
-                        <p>所有页面均为静态HTML文件，确保最高的兼容性和加载速度。</p>
+                    <div class="feature-item">
+                        <i class="fas fa-share-alt"></i>
+                        <div>
+                            <h3>易于分享</h3>
+                            <p>单个文件夹即可复制分享给朋友</p>
+                        </div>
                     </div>
-                    <div class="tech-item">
-                        <i class="fab fa-css3-alt"></i>
-                        <h3>现代CSS</h3>
-                        <p>使用CSS Grid、Flexbox和CSS变量构建响应式布局。</p>
+                    <div class="feature-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div>
+                            <h3>响应式设计</h3>
+                            <p>手机、平板、电脑都完美适配</p>
+                        </div>
                     </div>
-                    <div class="tech-item">
-                        <i class="fab fa-js"></i>
-                        <h3>原生JavaScript</h3>
-                        <p>无需依赖任何外部库，纯原生JavaScript实现所有功能。</p>
-                    </div>
-                    <div class="tech-item">
+                    <div class="feature-item">
                         <i class="fas fa-search"></i>
-                        <h3>本地搜索</h3>
-                        <p>基于JavaScript的本地全文搜索，保护用户隐私。</p>
+                        <div>
+                            <h3>本地搜索</h3>
+                            <p>基于JavaScript的本地全文搜索，保护隐私</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="about-values">
+            </section>
+
+            <!-- 数据来源 -->
+            <section class="content-section">
+                <h2><i class="fas fa-database"></i> 数据来源</h2>
+                <ul class="source-list">
+                    <li><i class="fas fa-check"></i> 伯克希尔·哈撒韦公司官方网站</li>
+                    <li><i class="fas fa-check"></i> SEC公开文件数据库</li>
+                    <li><i class="fas fa-check"></i> 巴菲特历年股东信和公开演讲</li>
+                    <li><i class="fas fa-check"></i> 权威财经媒体报道和分析</li>
+                    <li><i class="fas fa-check"></i> 巴菲特授权的官方传记</li>
+                </ul>
+            </section>
+
+            <!-- 核心价值 -->
+            <section class="content-section">
                 <h2><i class="fas fa-heart"></i> 核心价值</h2>
                 <div class="values-grid">
-                    <div class="value-item">
+                    <div class="value-card">
                         <i class="fas fa-unlock-alt"></i>
                         <h3>开放获取</h3>
-                        <p>所有内容永久免费开放，任何人都可以学习和分享。</p>
+                        <p>所有内容永久免费开放</p>
                     </div>
-                    <div class="value-item">
+                    <div class="value-card">
                         <i class="fas fa-user-shield"></i>
                         <h3>隐私保护</h3>
-                        <p>完全离线运行，不收集任何用户数据，保护个人隐私。</p>
+                        <p>完全离线运行，不收集任何数据</p>
                     </div>
-                    <div class="value-item">
+                    <div class="value-card">
                         <i class="fas fa-graduation-cap"></i>
                         <h3>终身学习</h3>
-                        <p>提供系统性的投资知识体系，支持持续学习和成长。</p>
+                        <p>系统性的投资知识体系</p>
                     </div>
-                    <div class="value-item">
+                    <div class="value-card">
                         <i class="fas fa-handshake"></i>
                         <h3>知识共享</h3>
-                        <p>鼓励分享和传播，让更多人受益于巴菲特的投资智慧。</p>
+                        <p>鼓励分享，让更多人受益</p>
                     </div>
                 </div>
-            </div>
-            
-            <div class="about-usage">
+            </section>
+
+            <!-- 使用指南 -->
+            <section class="content-section">
                 <h2><i class="fas fa-laptop"></i> 使用指南</h2>
-                <div class="usage-steps">
-                    <div class="step">
+                <div class="steps-list">
+                    <div class="step-item">
                         <div class="step-number">1</div>
                         <div class="step-content">
                             <h3>下载知识库</h3>
                             <p>前往<a href="download.html">下载页面</a>获取完整压缩包</p>
                         </div>
                     </div>
-                    <div class="step">
+                    <div class="step-item">
                         <div class="step-number">2</div>
                         <div class="step-content">
                             <h3>本地使用</h3>
                             <p>解压后双击<b>index.html</b>即可开始使用，无需安装任何软件</p>
                         </div>
                     </div>
-                    <div class="step">
+                    <div class="step-item">
                         <div class="step-number">3</div>
                         <div class="step-content">
                             <h3>多种学习方式</h3>
                             <p>按分类浏览、搜索关键词、或随机阅读发现新知识</p>
                         </div>
                     </div>
-                    <div class="step">
+                    <div class="step-item">
                         <div class="step-number">4</div>
                         <div class="step-content">
                             <h3>分享与备份</h3>
@@ -178,9 +213,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="about-faq">
+            </section>
+
+            <!-- 常见问题 -->
+            <section class="content-section">
                 <h2><i class="fas fa-question-circle"></i> 常见问题</h2>
                 <div class="faq-list">
                     <div class="faq-item">
@@ -200,81 +236,32 @@
                         <p>欢迎贡献！如果您发现有缺失的内容或有改进建议，欢迎联系我们。</p>
                     </div>
                 </div>
-            </div>
-            
-            <div class="about-contact">
+            </section>
+
+            <!-- 联系我们 -->
+            <section class="content-section">
                 <h2><i class="fas fa-envelope"></i> 联系我们</h2>
-                <div class="contact-info">
+                <div class="contact-box">
                     <p>如果您有任何问题、建议或反馈，欢迎通过以下方式联系我们：</p>
                     <div class="contact-methods">
-                        <div class="contact-method">
+                        <div class="contact-item">
                             <i class="fas fa-envelope"></i>
                             <span>邮箱：contact@buffett-knowledge-base.org</span>
                         </div>
-                        <div class="contact-method">
+                        <div class="contact-item">
                             <i class="fab fa-github"></i>
-                            <span>GitHub：buffett-knowledge-base</span>
+                            <span>GitHub：hangdianmark/buffett-knowledge-base</span>
                         </div>
                     </div>
-                    <div class="contact-note">
+                    <div class="notice-box">
                         <i class="fas fa-info-circle"></i>
                         <span>注意：我们不是伯克希尔·哈撒韦公司的官方组织，所有内容仅供学习和研究使用。</span>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     </main>
 
-    <!-- 页脚 -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <i class="fas fa-chart-line"></i>
-                    <span>巴菲特智慧库</span>
-                    <p class="footer-description">
-                        一个完整的、离线的沃伦·巴菲特投资知识库，供终身学习使用。
-                    </p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-section">
-                        <h4>主要内容</h4>
-                        <a href="browse.html?category=concepts">核心概念</a>
-                        <a href="browse.html?category=companies">投资公司</a>
-                        <a href="browse.html?category=berkshire">股东信件</a>
-                        <a href="browse.html?category=partnership">合伙人信</a>
-                    </div>
-                    <div class="footer-section">
-                        <h4>实用工具</h4>
-                        <a href="search.html">全文搜索</a>
-                        <a href="random.html">随机阅读</a>
-                        <a href="timeline.html">时间线</a>
-                        <a href="download.html">下载</a>
-                    </div>
-                    <div class="footer-section">
-                        <h4>关于项目</h4>
-                        <a href="about.html">关于本站</a>
-                        <a href="sources.html">数据来源</a>
-                        <a href="updates.html">更新记录</a>
-                        <a href="contact.html">联系我们</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 巴菲特智慧库 · 本网站所有内容均为离线可用 · 基于公开资料整理</p>
-                <p class="footer-note">
-                    <i class="fas fa-lightbulb"></i>
-                    声明：本网站内容仅供学习和研究使用，不构成任何投资建议。
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- 回到顶部按钮 -->
-    <button class="back-to-top" id="backToTop">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <script src="js/main.js"></script>
+    <script src="nav.js"></script>
 </body>
 </html>

@@ -5,84 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>搜索 - 巴菲特知识库</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <i class="fas fa-chart-line"></i>
-                <span>巴菲特智慧库</span>
-            </div>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> 首页</a>
-                <a href="browse.html" class="nav-link"><i class="fas fa-brain"></i> 核心概念</a>
-                <a href="browse.html?category=companies" class="nav-link"><i class="fas fa-building"></i> 投资公司</a>
-                <a href="browse.html?category=berkshire" class="nav-link"><i class="fas fa-envelope"></i> 股东信件</a>
-                <a href="browse.html?category=people" class="nav-link"><i class="fas fa-users"></i> 关键人物</a>
-                <a href="search.html" class="nav-link active"><i class="fas fa-search"></i> 搜索</a>
-            </div>
-            <button class="nav-toggle" id="navToggle">
+    <!-- 左侧导航栏 -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="sidebar-logo">
+                <i class="fas fa-book-open"></i>
+                <span>巴菲特知识库</span>
+            </a>
+            <button class="sidebar-toggle" id="sidebarToggle">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-    </nav>
-
-    <!-- 搜索页面头部 -->
-    <header class="search-header">
-        <div class="container">
-            <h1 class="search-title">全文搜索</h1>
-            <p class="search-subtitle">在186个页面中快速找到你需要的内容</p>
-            
-            <div class="search-container">
-                <div class="search-box-large">
-                    <i class="fas fa-search"></i>
-                    <input type="text" id="mainSearchInput" placeholder="输入关键词搜索，例如：'内在价值'、'护城河'、'可口可乐'...">
-                    <button class="btn btn-primary" id="mainSearchBtn">
-                        <i class="fas fa-search"></i> 搜索
-                    </button>
-                </div>
-                
-                <div class="search-tips">
-                    <h3><i class="fas fa-lightbulb"></i> 搜索技巧</h3>
-                    <ul>
-                        <li>使用中文关键词，如"价值投资"、"安全边际"</li>
-                        <li>搜索公司名称，如"可口可乐"、"苹果"</li>
-                        <li>搜索年份，如"1977"、"2008"查看特定年份信件</li>
-                        <li>搜索人物，如"芒格"、"格雷厄姆"</li>
-                    </ul>
-                </div>
-                
-                <div class="quick-searches">
-                    <h3><i class="fas fa-bolt"></i> 快速搜索</h3>
-                    <div class="quick-search-tags">
-                        <button class="quick-tag" data-search="内在价值">内在价值</button>
-                        <button class="quick-tag" data-search="护城河">护城河</button>
-                        <button class="quick-tag" data-search="安全边际">安全边际</button>
-                        <button class="quick-tag" data-search="可口可乐">可口可乐</button>
-                        <button class="quick-tag" data-search="苹果">苹果公司</button>
-                        <button class="quick-tag" data-search="芒格">查理·芒格</button>
-                        <button class="quick-tag" data-search="1977">1977年信</button>
-                        <button class="quick-tag" data-search="2008">金融危机</button>
-                        <button class="quick-tag" data-search="价值投资">价值投资</button>
-                        <button class="quick-tag" data-search="市场先生">市场先生</button>
-                    </div>
-                </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <h3 class="nav-section-title">导航</h3>
+                <a href="index.html" class="nav-item"><i class="fas fa-home"></i> 首页</a>
+                <a href="browse.html" class="nav-item"><i class="fas fa-compass"></i> 浏览</a>
+                <a href="partnership.html" class="nav-item"><i class="fas fa-handshake"></i> 合伙人信</a>
+                <a href="search.html" class="nav-item active"><i class="fas fa-search"></i> 搜索</a>
             </div>
-        </div>
+            <div class="nav-section">
+                <h3 class="nav-section-title">资源</h3>
+                <a href="about.html" class="nav-item"><i class="fas fa-info-circle"></i> 关于</a>
+                <a href="download.html" class="nav-item"><i class="fas fa-download"></i> 下载</a>
+            </div>
+            <div class="nav-section">
+                <h3 class="nav-section-title">伯克希尔</h3>
+                <a href="berkshire/index.html" class="nav-item"><i class="fas fa-building"></i> 股东信</a>
+                <a href="special/index.html" class="nav-item"><i class="fas fa-star"></i> 专题</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- 移动端顶部栏 -->
+    <header class="mobile-header">
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <span class="mobile-title">巴菲特知识库</span>
     </header>
 
-    <!-- 搜索结果区域 -->
-    <main class="search-results">
-        <div class="container">
-            <div class="results-header">
-                <h2 id="resultsTitle">输入关键词开始搜索</h2>
-                <div class="results-filters">
-                    <div class="filter-group">
-                        <label for="categoryFilter">分类筛选:</label>
+    <!-- 主内容区 -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <!-- 页面标题区 -->
+            <header class="page-header">
+                <div class="breadcrumb">
+                    <a href="index.html">首页</a> / 搜索
+                </div>
+                <h1><i class="fas fa-search"></i> 全文搜索</h1>
+                <p class="page-subtitle">在186个页面中快速找到你需要的内容</p>
+            </header>
+
+            <!-- 搜索框 -->
+            <section class="content-section">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="mainSearchInput" placeholder="输入关键词搜索，例如：'内在价值'、'护城河'、'可口可乐'...">
+                        <button class="btn btn-primary" id="mainSearchBtn">
+                            <i class="fas fa-search"></i> 搜索
+                        </button>
+                    </div>
+                    
+                    <div class="search-tips">
+                        <h3><i class="fas fa-lightbulb"></i> 搜索技巧</h3>
+                        <ul>
+                            <li>使用中文关键词，如"价值投资"、"安全边际"</li>
+                            <li>搜索公司名称，如"可口可乐"、"苹果"</li>
+                            <li>搜索年份，如"1977"、"2008"查看特定年份信件</li>
+                            <li>搜索人物，如"芒格"、"格雷厄姆"</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="quick-searches">
+                        <h3><i class="fas fa-bolt"></i> 快速搜索</h3>
+                        <div class="quick-tags">
+                            <button class="quick-tag" data-search="内在价值">内在价值</button>
+                            <button class="quick-tag" data-search="护城河">护城河</button>
+                            <button class="quick-tag" data-search="安全边际">安全边际</button>
+                            <button class="quick-tag" data-search="可口可乐">可口可乐</button>
+                            <button class="quick-tag" data-search="苹果">苹果公司</button>
+                            <button class="quick-tag" data-search="芒格">查理·芒格</button>
+                            <button class="quick-tag" data-search="1977">1977年信</button>
+                            <button class="quick-tag" data-search="2008">金融危机</button>
+                            <button class="quick-tag" data-search="价值投资">价值投资</button>
+                            <button class="quick-tag" data-search="市场先生">市场先生</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 搜索结果 -->
+            <section class="content-section">
+                <div class="results-header">
+                    <h2 id="resultsTitle"><i class="fas fa-list"></i> 搜索结果</h2>
+                    <div class="results-filters">
                         <select id="categoryFilter">
                             <option value="all">全部类别</option>
                             <option value="concepts">核心概念</option>
@@ -92,169 +115,104 @@
                             <option value="people">关键人物</option>
                             <option value="special">特别信件</option>
                         </select>
-                    </div>
-                    <div class="filter-group">
-                        <label for="sortFilter">排序方式:</label>
                         <select id="sortFilter">
                             <option value="relevance">相关度</option>
                             <option value="title">标题A-Z</option>
-                            <option value="year">年份(新-旧)</option>
+                            <option value="year">年份</option>
                         </select>
                     </div>
                 </div>
-            </div>
-            
-            <div class="results-container">
-                <div class="results-list" id="resultsList">
-                    <!-- 初始状态 -->
-                    <div class="initial-state">
-                        <div class="initial-icon">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <h3>开始搜索</h3>
-                        <p>在搜索框中输入关键词，查找巴菲特知识库中的相关内容</p>
-                        <div class="initial-stats">
-                            <div class="stat">
-                                <i class="fas fa-file-alt"></i>
-                                <span>可搜索页面: <strong>186</strong></span>
-                            </div>
-                            <div class="stat">
-                                <i class="fas fa-font"></i>
-                                <span>总字数: <strong>约150万</strong></span>
-                            </div>
-                            <div class="stat">
-                                <i class="fas fa-history"></i>
-                                <span>时间跨度: <strong>68年</strong></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 
-                <div class="results-sidebar">
-                    <div class="sidebar-card">
-                        <h3><i class="fas fa-chart-bar"></i> 搜索统计</h3>
-                        <div class="stats-grid">
-                            <div class="stat-item">
-                                <div class="stat-value" id="totalPages">186</div>
-                                <div class="stat-label">总页面数</div>
+                <div class="results-container">
+                    <div class="results-list" id="resultsList">
+                        <!-- 初始状态 -->
+                        <div class="initial-state">
+                            <div class="initial-icon">
+                                <i class="fas fa-search"></i>
                             </div>
-                            <div class="stat-item">
-                                <div class="stat-value" id="searchableWords">1.5M</div>
-                                <div class="stat-label">可搜索字数</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-value">6</div>
-                                <div class="stat-label">内容分类</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-value">68</div>
-                                <div class="stat-label">时间跨度(年)</div>
+                            <h3>开始搜索</h3>
+                            <p>在搜索框中输入关键词，查找巴菲特知识库中的相关内容</p>
+                            <div class="initial-stats">
+                                <div class="stat">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>可搜索页面: <strong>186</strong></span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-font"></i>
+                                    <span>总字数: <strong>约150万</strong></span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-history"></i>
+                                    <span>时间跨度: <strong>68年</strong></span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="sidebar-card">
-                        <h3><i class="fas fa-fire"></i> 热门搜索</h3>
-                        <div class="popular-searches">
-                            <button class="popular-tag" data-search="内在价值">
-                                <span class="tag-text">内在价值</span>
-                                <span class="tag-count">35次</span>
-                            </button>
-                            <button class="popular-tag" data-search="护城河">
-                                <span class="tag-text">护城河</span>
-                                <span class="tag-count">28次</span>
-                            </button>
-                            <button class="popular-tag" data-search="价值投资">
-                                <span class="tag-text">价值投资</span>
-                                <span class="tag-count">42次</span>
-                            </button>
-                            <button class="popular-tag" data-search="可口可乐">
-                                <span class="tag-text">可口可乐</span>
-                                <span class="tag-count">18次</span>
-                            </button>
-                            <button class="popular-tag" data-search="安全边际">
-                                <span class="tag-text">安全边际</span>
-                                <span class="tag-count">25次</span>
-                            </button>
+                    <div class="results-sidebar">
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-chart-bar"></i> 搜索统计</h3>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <div class="stat-value" id="totalPages">186</div>
+                                    <div class="stat-label">总页面数</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value" id="searchableWords">1.5M</div>
+                                    <div class="stat-label">可搜索字数</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">6</div>
+                                    <div class="stat-label">内容分类</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">68</div>
+                                    <div class="stat-label">时间跨度(年)</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-fire"></i> 热门搜索</h3>
+                            <div class="popular-tags">
+                                <button class="popular-tag" data-search="内在价值">内在价值</button>
+                                <button class="popular-tag" data-search="护城河">护城河</button>
+                                <button class="popular-tag" data-search="价值投资">价值投资</button>
+                                <button class="popular-tag" data-search="可口可乐">可口可乐</button>
+                                <button class="popular-tag" data-search="安全边际">安全边际</button>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-info-circle"></i> 搜索说明</h3>
+                            <ul class="info-list">
+                                <li>搜索基于页面标题和内容</li>
+                                <li>支持中文关键词搜索</li>
+                                <li>搜索结果按相关度排序</li>
+                                <li>点击结果可直接阅读</li>
+                                <li>所有搜索均在本地完成</li>
+                            </ul>
                         </div>
                     </div>
-                    
-                    <div class="sidebar-card">
-                        <h3><i class="fas fa-info-circle"></i> 搜索说明</h3>
-                        <ul class="info-list">
-                            <li>搜索基于页面标题和内容</li>
-                            <li>支持中文关键词搜索</li>
-                            <li>搜索结果按相关度排序</li>
-                            <li>点击结果可直接阅读</li>
-                            <li>所有搜索均在本地完成</li>
-                        </ul>
+                </div>
+            </section>
+
+            <!-- 搜索历史 -->
+            <section class="content-section">
+                <div class="search-history" id="searchHistory">
+                    <h3><i class="fas fa-history"></i> 搜索历史</h3>
+                    <div class="history-list" id="historyList">
+                        <!-- 搜索历史将通过JavaScript动态加载 -->
                     </div>
+                    <button class="btn btn-text" id="clearHistory">
+                        <i class="fas fa-trash"></i> 清除历史记录
+                    </button>
                 </div>
-            </div>
-            
-            <div class="search-history" id="searchHistory">
-                <h3><i class="fas fa-history"></i> 搜索历史</h3>
-                <div class="history-list" id="historyList">
-                    <!-- 搜索历史将通过JavaScript动态加载 -->
-                </div>
-                <button class="btn btn-text" id="clearHistory">
-                    <i class="fas fa-trash"></i> 清除历史记录
-                </button>
-            </div>
+            </section>
         </div>
     </main>
 
-    <!-- 页脚 -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <i class="fas fa-chart-line"></i>
-                    <span>巴菲特智慧库</span>
-                    <p class="footer-description">
-                        一个完整的、离线的沃伦·巴菲特投资知识库，供终身学习使用。
-                    </p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-section">
-                        <h4>内容分类</h4>
-                        <a href="browse.html?category=concepts">核心概念</a>
-                        <a href="browse.html?category=companies">投资公司</a>
-                        <a href="browse.html?category=berkshire">股东信件</a>
-                        <a href="browse.html?category=partnership">合伙人信</a>
-                    </div>
-                    <div class="footer-section">
-                        <h4>工具</h4>
-                        <a href="search.html">全文搜索</a>
-                        <a href="random.html">随机阅读</a>
-                        <a href="timeline.html">时间线</a>
-                        <a href="download.html">下载</a>
-                    </div>
-                    <div class="footer-section">
-                        <h4>关于</h4>
-                        <a href="about.html">关于本站</a>
-                        <a href="sources.html">数据来源</a>
-                        <a href="updates.html">更新记录</a>
-                        <a href="contact.html">联系</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 巴菲特智慧库 · 本网站所有内容均为离线可用 · 基于 <a href="https://buffett-letters-eir.pages.dev" target="_blank">buffett-letters-eir.pages.dev</a></p>
-                <p class="footer-note">
-                    <i class="fas fa-info-circle"></i>
-                    提示：搜索功能完全在本地运行，无需网络连接。
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- 回到顶部按钮 -->
-    <button class="back-to-top" id="backToTop">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <script src="js/main.js"></script>
+    <script src="nav.js"></script>
     <script src="js/search.js"></script>
 </body>
 </html>

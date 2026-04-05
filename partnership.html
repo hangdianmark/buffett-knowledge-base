@@ -5,111 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>巴菲特合伙人信 (1956-1964) | 巴菲特知识库</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/partnership.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
+    <!-- 左侧导航栏 -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="sidebar-logo">
                 <i class="fas fa-book-open"></i>
                 <span>巴菲特知识库</span>
             </a>
-            <div class="nav-menu">
-                <a href="index.html"><i class="fas fa-home"></i> 首页</a>
-                <a href="browse.html"><i class="fas fa-compass"></i> 浏览</a>
-                <a href="partnership.html" class="active"><i class="fas fa-handshake"></i> 合伙人信</a>
-                <a href="search.html"><i class="fas fa-search"></i> 搜索</a>
-                <a href="about.html"><i class="fas fa-info-circle"></i> 关于</a>
-                <a href="download.html"><i class="fas fa-download"></i> 下载</a>
-            </div>
-            <button class="theme-toggle" id="themeToggle">
-                <i class="fas fa-moon"></i>
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="fas fa-bars"></i>
             </button>
         </div>
-    </nav>
-
-    <!-- 英雄区域 -->
-    <header class="partnership-hero">
-        <div class="hero-content">
-            <h1><i class="fas fa-handshake"></i> 巴菲特合伙人信</h1>
-            <p class="hero-subtitle">投资智慧的源头 · 价值投资的起点 (1956-1964)</p>
-            <div class="hero-stats">
-                <div class="stat-card">
-                    <div class="stat-number">17</div>
-                    <div class="stat-label">封合伙人信</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">9</div>
-                    <div class="stat-label">年跨度</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">152</div>
-                    <div class="stat-label">页PDF文档</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">⭐</div>
-                    <div class="stat-label">投资源头</div>
-                </div>
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <h3 class="nav-section-title">导航</h3>
+                <a href="index.html" class="nav-item"><i class="fas fa-home"></i> 首页</a>
+                <a href="browse.html" class="nav-item"><i class="fas fa-compass"></i> 浏览</a>
+                <a href="partnership.html" class="nav-item active"><i class="fas fa-handshake"></i> 合伙人信</a>
+                <a href="search.html" class="nav-item"><i class="fas fa-search"></i> 搜索</a>
             </div>
-        </div>
+            <div class="nav-section">
+                <h3 class="nav-section-title">资源</h3>
+                <a href="about.html" class="nav-item"><i class="fas fa-info-circle"></i> 关于</a>
+                <a href="download.html" class="nav-item"><i class="fas fa-download"></i> 下载</a>
+            </div>
+            <div class="nav-section">
+                <h3 class="nav-section-title">伯克希尔</h3>
+                <a href="berkshire/index.html" class="nav-item"><i class="fas fa-building"></i> 股东信</a>
+                <a href="special/index.html" class="nav-item"><i class="fas fa-star"></i> 专题</a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- 移动端顶部栏 -->
+    <header class="mobile-header">
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <span class="mobile-title">巴菲特知识库</span>
     </header>
 
-    <!-- 主要内容 -->
-    <main class="partnership-main">
-        <div class="container">
-            <!-- 介绍部分 -->
-            <section class="intro-section">
-                <h2><i class="fas fa-history"></i> 历史意义</h2>
-                <div class="intro-content">
-                    <p>巴菲特合伙人信（Buffett Partnership Letters）是投资史上最珍贵的文献之一，记录了巴菲特从1956年成立第一个投资合伙公司到1969年关闭合伙公司的完整历程。</p>
-                    <div class="highlight-box">
-                        <h3><i class="fas fa-lightbulb"></i> 为什么这些信件如此重要？</h3>
-                        <ul>
-                            <li><strong>源头文件</strong>：巴菲特投资哲学的初次系统阐述</li>
-                            <li><strong>实践验证</strong>：价值投资理论在真实市场的应用记录</li>
-                            <li><strong>历史见证</strong>：20世纪50-60年代美国股市的珍贵记录</li>
-                            <li><strong>教育价值</strong>：学习投资思维过程的绝佳材料</li>
-                        </ul>
+    <!-- 主内容区 -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <!-- 页面标题区 -->
+            <header class="page-header">
+                <div class="breadcrumb">
+                    <a href="index.html">首页</a> / <a href="browse.html">浏览</a> / 合伙人信
+                </div>
+                <h1><i class="fas fa-handshake"></i> 巴菲特合伙人信</h1>
+                <p class="page-subtitle">投资智慧的源头 · 价值投资的起点 (1956-1964)</p>
+                
+                <div class="page-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">17</span>
+                        <span class="stat-label">封合伙人信</span>
                     </div>
+                    <div class="stat-item">
+                        <span class="stat-value">9</span>
+                        <span class="stat-label">年跨度</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">152</span>
+                        <span class="stat-label">页PDF文档</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 介绍部分 -->
+            <section class="content-section">
+                <h2><i class="fas fa-history"></i> 历史意义</h2>
+                <p>巴菲特合伙人信（Buffett Partnership Letters）是投资史上最珍贵的文献之一，记录了巴菲特从1956年成立第一个投资合伙公司到1969年关闭合伙公司的完整历程。</p>
+                
+                <div class="info-box">
+                    <h3><i class="fas fa-lightbulb"></i> 为什么这些信件如此重要？</h3>
+                    <ul>
+                        <li><strong>源头文件</strong>：巴菲特投资哲学的初次系统阐述</li>
+                        <li><strong>实践验证</strong>：价值投资理论在真实市场的应用记录</li>
+                        <li><strong>历史见证</strong>：20世纪50-60年代美国股市的珍贵记录</li>
+                        <li><strong>教育价值</strong>：学习投资思维过程的绝佳材料</li>
+                    </ul>
                 </div>
             </section>
 
             <!-- PDF下载区 -->
-            <section class="pdf-section">
+            <section class="content-section">
                 <h2><i class="fas fa-file-pdf"></i> PDF文档下载</h2>
-                <div class="pdf-grid">
-                    <div class="pdf-card">
-                        <div class="pdf-icon">
+                <div class="download-grid">
+                    <div class="download-card">
+                        <div class="download-icon">
                             <i class="fas fa-book"></i>
                         </div>
                         <h3>完整合集 PDF</h3>
-                        <p class="pdf-description">Ivey Business School提供的完整合伙人信合集，包含1957-1970年所有信件。</p>
-                        <div class="pdf-meta">
+                        <p>Ivey Business School提供的完整合伙人信合集，包含1957-1970年所有信件。</p>
+                        <div class="download-meta">
                             <span><i class="fas fa-file-alt"></i> 152页</span>
                             <span><i class="fas fa-weight"></i> 692KB</span>
                             <span><i class="fas fa-calendar"></i> 1957-1970</span>
                         </div>
-                        <a href="partnership-pdf/buffett-partnership-letters-ivey.pdf" class="pdf-download-btn" download>
+                        <a href="partnership-pdf/buffett-partnership-letters-ivey.pdf" class="btn btn-primary" download>
                             <i class="fas fa-download"></i> 下载PDF
                         </a>
                     </div>
 
-                    <div class="pdf-card premium">
-                        <div class="pdf-icon">
+                    <div class="download-card">
+                        <div class="download-icon premium">
                             <i class="fas fa-gem"></i>
                         </div>
                         <h3>扩展合集 PDF</h3>
-                        <p class="pdf-description">Safal Niveshak提供的扩展合集，包含合伙人信和伯克希尔股东信。</p>
-                        <div class="pdf-meta">
+                        <p>Safal Niveshak提供的扩展合集，包含合伙人信和伯克希尔股东信。</p>
+                        <div class="download-meta">
                             <span><i class="fas fa-file-alt"></i> ~500页</span>
                             <span><i class="fas fa-weight"></i> 4.5MB</span>
                             <span><i class="fas fa-calendar"></i> 1957-2012</span>
                         </div>
-                        <a href="partnership-pdf/warren-buffett-letters-1957-2012.pdf" class="pdf-download-btn" download>
+                        <a href="partnership-pdf/warren-buffett-letters-1957-2012.pdf" class="btn btn-primary" download>
                             <i class="fas fa-download"></i> 下载扩展版
                         </a>
                     </div>
@@ -117,10 +132,9 @@
             </section>
 
             <!-- 信件时间线 -->
-            <section class="timeline-section">
-                <h2><i class="fas fa-timeline"></i> 信件时间线 (1956-1964)</h2>
+            <section class="content-section">
+                <h2><i class="fas fa-clock"></i> 信件时间线 (1956-1964)</h2>
                 <div class="timeline">
-                    <!-- 1956年 -->
                     <div class="timeline-item">
                         <div class="timeline-year">1956</div>
                         <div class="timeline-content">
@@ -128,17 +142,11 @@
                             <p class="timeline-date">1956年5月1日</p>
                             <p class="timeline-desc">巴菲特联合有限公司(Buffett Associates, Ltd.)成立，巴菲特投资生涯的正式起点。</p>
                             <div class="timeline-links">
-                                <a href="partnership/1956-有限合伙协议.html" class="timeline-link">
-                                    <i class="fas fa-globe"></i> 在线阅读
-                                </a>
-                                <a href="#" class="timeline-link disabled">
-                                    <i class="fas fa-file-pdf"></i> PDF (即将推出)
-                                </a>
+                                <a href="partnership/1956-有限合伙协议.html" class="btn btn-sm"><i class="fas fa-globe"></i> 在线阅读</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 1957年 -->
                     <div class="timeline-item">
                         <div class="timeline-year">1957</div>
                         <div class="timeline-content">
@@ -146,17 +154,12 @@
                             <p class="timeline-date">1958年2月</p>
                             <p class="timeline-desc">巴菲特的第一封年度合伙人信，阐述了基本的投资哲学和市场观点。</p>
                             <div class="timeline-links">
-                                <a href="partnership/1957-巴菲特致合伙人信.html" class="timeline-link">
-                                    <i class="fas fa-globe"></i> 在线阅读
-                                </a>
-                                <a href="partnership-pdf/buffett-partnership-letters-ivey.pdf#page=1" class="timeline-link">
-                                    <i class="fas fa-file-pdf"></i> 查看PDF
-                                </a>
+                                <a href="partnership/1957-巴菲特致合伙人信.html" class="btn btn-sm"><i class="fas fa-globe"></i> 在线阅读</a>
+                                <a href="partnership-pdf/buffett-partnership-letters-ivey.pdf#page=1" class="btn btn-sm btn-outline" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 1958年 -->
                     <div class="timeline-item">
                         <div class="timeline-year">1958</div>
                         <div class="timeline-content">
@@ -164,17 +167,12 @@
                             <p class="timeline-date">1959年2月</p>
                             <p class="timeline-desc">详细分析了1958年市场状况，投资策略进一步系统化。</p>
                             <div class="timeline-links">
-                                <a href="partnership/1958-巴菲特致合伙人信.html" class="timeline-link">
-                                    <i class="fas fa-globe"></i> 在线阅读
-                                </a>
-                                <a href="partnership-pdf/buffett-partnership-letters-ivey.pdf#page=10" class="timeline-link">
-                                    <i class="fas fa-file-pdf"></i> 查看PDF
-                                </a>
+                                <a href="partnership/1958-巴菲特致合伙人信.html" class="btn btn-sm"><i class="fas fa-globe"></i> 在线阅读</a>
+                                <a href="partnership-pdf/buffett-partnership-letters-ivey.pdf#page=10" class="btn btn-sm btn-outline" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 1959年 -->
                     <div class="timeline-item">
                         <div class="timeline-year">1959</div>
                         <div class="timeline-content">
@@ -182,17 +180,12 @@
                             <p class="timeline-date">1960年2月</p>
                             <p class="timeline-desc">讨论了投资组合管理和资产配置的基本原则。</p>
                             <div class="timeline-links">
-                                <a href="partnership/1959-巴菲特致合伙人信.html" class="timeline-link">
-                                    <i class="fas fa-globe"></i> 在线阅读
-                                </a>
-                                <a href="partnership-pdf/buffett-partnership-letters-ivey.pdf#page=20" class="timeline-link">
-                                    <i class="fas fa-file-pdf"></i> 查看PDF
-                                </a>
+                                <a href="partnership/1959-巴菲特致合伙人信.html" class="btn btn-sm"><i class="fas fa-globe"></i> 在线阅读</a>
+                                <a href="partnership-pdf/buffett-partnership-letters-ivey.pdf#page=20" class="btn btn-sm btn-outline" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 1960年 -->
                     <div class="timeline-item">
                         <div class="timeline-year">1960</div>
                         <div class="timeline-content">
@@ -200,17 +193,12 @@
                             <p class="timeline-date">1961年2月</p>
                             <p class="timeline-desc">强调了风险管理和资本保全的重要性。</p>
                             <div class="timeline-links">
-                                <a href="partnership/1960-巴菲特致合伙人信.html" class="timeline-link">
-                                    <i class="fas fa-globe"></i> 在线阅读
-                                </a>
-                                <a href="partnership-pdf/buffett-partnership-letters-ivey.pdf#page=30" class="timeline-link">
-                                    <i class="fas fa-file-pdf"></i> 查看PDF
-                                </a>
+                                <a href="partnership/1960-巴菲特致合伙人信.html" class="btn btn-sm"><i class="fas fa-globe"></i> 在线阅读</a>
+                                <a href="partnership-pdf/buffett-partnership-letters-ivey.pdf#page=30" class="btn btn-sm btn-outline" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 1961年 -->
                     <div class="timeline-item">
                         <div class="timeline-year">1961</div>
                         <div class="timeline-content">
@@ -218,20 +206,13 @@
                             <p class="timeline-date">1962年1月 + 7月</p>
                             <p class="timeline-desc">年度信和年中信，展示了投资策略的调整过程。</p>
                             <div class="timeline-links">
-                                <a href="partnership/1961-巴菲特致合伙人信.html" class="timeline-link">
-                                    <i class="fas fa-globe"></i> 在线阅读
-                                </a>
-                                <a href="partnership/1961年中-巴菲特致合伙人信.html" class="timeline-link">
-                                    <i class="fas fa-globe"></i> 年中信
-                                </a>
-                                <a href="partnership-pdf/buffett-partnership-letters-ivey.pdf#page=40" class="timeline-link">
-                                    <i class="fas fa-file-pdf"></i> 查看PDF
-                                </a>
+                                <a href="partnership/1961-巴菲特致合伙人信.html" class="btn btn-sm"><i class="fas fa-globe"></i> 年度信</a>
+                                <a href="partnership/1961年中-巴菲特致合伙人信.html" class="btn btn-sm"><i class="fas fa-globe"></i> 年中信</a>
+                                <a href="partnership-pdf/buffett-partnership-letters-ivey.pdf#page=40" class="btn btn-sm btn-outline" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 1962年 -->
                     <div class="timeline-item">
                         <div class="timeline-year">1962</div>
                         <div class="timeline-content">
@@ -239,20 +220,13 @@
                             <p class="timeline-date">1963年1月 + 7月 + 11月 + 12月</p>
                             <p class="timeline-desc">经历了市场波动，展示了危机应对和投资韧性。</p>
                             <div class="timeline-links">
-                                <a href="partnership/1962-巴菲特致合伙人信.html" class="timeline-link">
-                                    <i class="fas fa-globe"></i> 年度信
-                                </a>
-                                <a href="partnership/1962年中-巴菲特致合伙人信.html" class="timeline-link">
-                                    <i class="fas fa-globe"></i> 年中信
-                                </a>
-                                <a href="partnership-pdf/buffett-partnership-letters-ivey.pdf#page=50" class="timeline-link">
-                                    <i class="fas fa-file-pdf"></i> 查看PDF
-                                </a>
+                                <a href="partnership/1962-巴菲特致合伙人信.html" class="btn btn-sm"><i class="fas fa-globe"></i> 年度信</a>
+                                <a href="partnership/1962年中-巴菲特致合伙人信.html" class="btn btn-sm"><i class="fas fa-globe"></i> 年中信</a>
+                                <a href="partnership-pdf/buffett-partnership-letters-ivey.pdf#page=50" class="btn btn-sm btn-outline" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 1963年 -->
                     <div class="timeline-item">
                         <div class="timeline-year">1963</div>
                         <div class="timeline-content">
@@ -260,20 +234,13 @@
                             <p class="timeline-date">1964年1月 + 7月 + 11月 + 12月</p>
                             <p class="timeline-desc">投资哲学趋于成熟，系统性的投资框架形成。</p>
                             <div class="timeline-links">
-                                <a href="partnership/1963-巴菲特致合伙人信.html" class="timeline-link">
-                                    <i class="fas fa-globe"></i> 年度信
-                                </a>
-                                <a href="partnership/1963年中-巴菲特致合伙人信.html" class="timeline-link">
-                                    <i class="fas fa-globe"></i> 年中信
-                                </a>
-                                <a href="partnership-pdf/buffett-partnership-letters-ivey.pdf#page=70" class="timeline-link">
-                                    <i class="fas fa-file-pdf"></i> 查看PDF
-                                </a>
+                                <a href="partnership/1963-巴菲特致合伙人信.html" class="btn btn-sm"><i class="fas fa-globe"></i> 年度信</a>
+                                <a href="partnership/1963年中-巴菲特致合伙人信.html" class="btn btn-sm"><i class="fas fa-globe"></i> 年中信</a>
+                                <a href="partnership-pdf/buffett-partnership-letters-ivey.pdf#page=70" class="btn btn-sm btn-outline" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 1964年 -->
                     <div class="timeline-item">
                         <div class="timeline-year">1964</div>
                         <div class="timeline-content">
@@ -281,15 +248,9 @@
                             <p class="timeline-date">1965年1月 + 7月</p>
                             <p class="timeline-desc">合伙阶段的总结，为伯克希尔时期做准备。</p>
                             <div class="timeline-links">
-                                <a href="partnership/1964-巴菲特致合伙人信.html" class="timeline-link">
-                                    <i class="fas fa-globe"></i> 年度信
-                                </a>
-                                <a href="partnership/1964年中-巴菲特致合伙人信.html" class="timeline-link">
-                                    <i class="fas fa-globe"></i> 年中信
-                                </a>
-                                <a href="partnership-pdf/buffett-partnership-letters-ivey.pdf#page=90" class="timeline-link">
-                                    <i class="fas fa-file-pdf"></i> 查看PDF
-                                </a>
+                                <a href="partnership/1964-巴菲特致合伙人信.html" class="btn btn-sm"><i class="fas fa-globe"></i> 年度信</a>
+                                <a href="partnership/1964年中-巴菲特致合伙人信.html" class="btn btn-sm"><i class="fas fa-globe"></i> 年中信</a>
+                                <a href="partnership-pdf/buffett-partnership-letters-ivey.pdf#page=90" class="btn btn-sm btn-outline" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
                             </div>
                         </div>
                     </div>
@@ -297,7 +258,7 @@
             </section>
 
             <!-- 学习指南 -->
-            <section class="guide-section">
+            <section class="content-section">
                 <h2><i class="fas fa-graduation-cap"></i> 学习指南</h2>
                 <div class="guide-grid">
                     <div class="guide-card">
@@ -344,67 +305,30 @@
             </section>
 
             <!-- 快速访问 -->
-            <section class="quick-access">
+            <section class="content-section">
                 <h2><i class="fas fa-bolt"></i> 快速访问</h2>
-                <div class="access-grid">
-                    <a href="partnership-pdf/partnership-letters-inventory.md" class="access-card">
+                <div class="quick-links">
+                    <a href="partnership-pdf/partnership-letters-inventory.md" class="quick-link-card">
                         <i class="fas fa-list"></i>
-                        <h3>完整清单</h3>
-                        <p>查看17封合伙人信的详细清单</p>
+                        <span>完整清单</span>
                     </a>
-                    <a href="search.html?q=合伙人信" class="access-card">
+                    <a href="search.html" class="quick-link-card">
                         <i class="fas fa-search"></i>
-                        <h3>搜索内容</h3>
-                        <p>在全部信件中搜索关键词</p>
+                        <span>搜索内容</span>
                     </a>
-                    <a href="browse.html#partnership" class="access-card">
+                    <a href="browse.html" class="quick-link-card">
                         <i class="fas fa-compass"></i>
-                        <h3>浏览所有</h3>
-                        <p>按分类浏览所有知识库内容</p>
+                        <span>浏览所有</span>
                     </a>
-                    <a href="download.html" class="access-card">
+                    <a href="download.html" class="quick-link-card">
                         <i class="fas fa-download"></i>
-                        <h3>下载全部</h3>
-                        <p>获取完整知识库离线版本</p>
+                        <span>下载全部</span>
                     </a>
                 </div>
             </section>
         </div>
     </main>
 
-    <!-- 页脚 -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3><i class="fas fa-book-open"></i> 巴菲特知识库</h3>
-                    <p>收藏、整理、分享巴菲特的投资智慧</p>
-                    <p class="footer-copyright">© 2026 巴菲特知识库项目 · 仅供学习研究使用</p>
-                </div>
-                <div class="footer-section">
-                    <h3>快速链接</h3>
-                    <a href="index.html">首页</a>
-                    <a href="browse.html">浏览</a>
-                    <a href="partnership.html">合伙人信</a>
-                    <a href="search.html">搜索</a>
-                </div>
-                <div class="footer-section">
-                    <h3>资源</h3>
-                    <a href="about.html">关于项目</a>
-                    <a href="download.html">下载</a>
-                    <a href="partnership-pdf/partnership-letters-inventory.md">信件清单</a>
-                </div>
-                <div class="footer-section">
-                    <h3>联系</h3>
-                    <p>如有问题或建议</p>
-                    <p>请通过项目页面反馈</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
-    <script src="js/partnership.js"></script>
+    <script src="nav.js"></script>
 </body>
 </html>

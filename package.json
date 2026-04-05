@@ -1,0 +1,55 @@
+{
+  "name": "buffett-knowledge-base",
+  "version": "1.0.0",
+  "description": "一个完整的、离线的沃伦·巴菲特投资知识库",
+  "main": "index.html",
+  "author": "巴菲特知识库团队",
+  "license": "CC-BY-NC-SA-4.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buffett-knowledge-base/buffett-knowledge-base.git"
+  },
+  "keywords": [
+    "巴菲特",
+    "投资",
+    "价值投资",
+    "知识库",
+    "离线",
+    "终身学习"
+  ],
+  "homepage": "https://buffett-knowledge-base.org",
+  "bugs": {
+    "url": "https://github.com/buffett-knowledge-base/buffett-knowledge-base/issues"
+  },
+  "contributors": [],
+  "files": [
+    "index.html",
+    "browse.html",
+    "search.html",
+    "about.html",
+    "download.html",
+    "css/",
+    "js/",
+    "concepts/",
+    "companies/",
+    "berkshire/",
+    "partnership/",
+    "people/",
+    "special/",
+    "README.md",
+    "LICENSE.txt"
+  ],
+  "stats": {
+    "total_pages": 186,
+    "categories": {
+      "concepts": 35,
+      "companies": 61,
+      "berkshire": 60,
+      "partnership": 17,
+      "people": 7,
+      "special": 4
+    },
+    "size_mb": 12,
+    "last_updated": "2026-04-04"
+  }
+}

@@ -1,0 +1,12 @@
+# Git
+.DS_Store
+*.log
+
+# Editor
+.vscode/
+*.swp
+*.swo
+Thumbs.db
+
+# Temporary files
+*~
